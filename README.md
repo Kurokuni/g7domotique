@@ -1,2 +1,2 @@
 # g7domotique
-C'est un projet d'etudiants de l'isep
+C'est un projet d'etudiants du groupe 7
