@@ -15,9 +15,9 @@ print_r($data);*/
 
 <?php
 
-function getNom() {
+function getCommand() {
     require('../else/connexionDB.php');
-    $requ=$conn->prepare("SELECT * FROM actionneur");
+    $requ=$conn->prepare("SELECT command FROM actionneur");
     $requ->execute();
     echo'<br>';
     while($data=$requ->fetch())
