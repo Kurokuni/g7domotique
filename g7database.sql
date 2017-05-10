@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 09 Mai 2017 à 08:28
+-- Généré le :  Mer 10 Mai 2017 à 09:30
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  5.6.30
 
@@ -50,11 +50,20 @@ CREATE TABLE `adress_home` (
   `city` varchar(50) NOT NULL,
   `zipcode` int(5) NOT NULL,
   `country` varchar(50) NOT NULL,
+  `floor_num` int(11) NOT NULL,
   `room_num` int(11) NOT NULL,
   `capteur_num` int(11) NOT NULL,
   `area` int(11) NOT NULL,
   `IDUSER` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `adress_home`
+--
+
+INSERT INTO `adress_home` (`IDADRESSE`, `IDHOME`, `street_num`, `street`, `city`, `zipcode`, `country`, `floor_num`, `room_num`, `capteur_num`, `area`, `IDUSER`) VALUES
+(1, 1, 42, 'aaa', 'Paris', 75007, 'France', 4, 11, 30, 250, 1),
+(2, 2, 2, 'Place Claude Monet', 'Buc', 78530, 'France', 3, 13, 40, 250, 4);
 
 -- --------------------------------------------------------
 
@@ -100,6 +109,30 @@ CREATE TABLE `data` (
   `type` int(11) NOT NULL,
   `IDCAPTEUR` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `etage`
+--
+
+CREATE TABLE `etage` (
+  `IDETAGE` int(11) NOT NULL,
+  `IDHOME` int(11) NOT NULL,
+  `Etage_-1` tinyint(1) NOT NULL DEFAULT '0',
+  `Etage_0` tinyint(1) NOT NULL DEFAULT '1',
+  `Etage_1` tinyint(1) NOT NULL DEFAULT '0',
+  `Etage_2` int(11) NOT NULL DEFAULT '0',
+  `Etage_3` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `etage`
+--
+
+INSERT INTO `etage` (`IDETAGE`, `IDHOME`, `Etage_-1`, `Etage_0`, `Etage_1`, `Etage_2`, `Etage_3`) VALUES
+(2, 2, 0, 1, 1, 1, 0),
+(1, 1, 1, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
