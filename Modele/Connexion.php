@@ -16,7 +16,6 @@ function testConnexion ($pseudo, $mdp)
     } else {
         return false;
     }
-
 }
 
 
