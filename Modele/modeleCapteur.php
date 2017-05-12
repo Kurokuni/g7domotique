@@ -1,6 +1,6 @@
 <?php
 
-require('../else/connexionDB.php');
+require('../Else/ConnexionDB.php');
 
 
 /*$rek=$conn->prepare("SELECT * FROM personne");
