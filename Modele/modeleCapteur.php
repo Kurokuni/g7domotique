@@ -1,6 +1,6 @@
 <?php
 
-require('../Else/ConnexionDB.php');
+require('../Else/connexionDB.php');
 
 
 /*$rek=$conn->prepare("SELECT * FROM personne");
@@ -18,7 +18,7 @@ print_r($data);*/
 $SeeData='command';
 
 function getArg($Arg) {
-    require('../Else/ConnexionDB.php');
+    require('../Else/connexionDB.php');
     $requ=$conn->prepare("SELECT $Arg FROM actionneur");
     $requ->execute();
     echo'<br>';
