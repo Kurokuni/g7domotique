@@ -5,7 +5,4 @@ if(testConnexion($_POST['nom'], $_POST['mdp'])){
 } else {
 
 }
-
-
-
 ?>
