@@ -1,10 +1,8 @@
 <?php
-if(!empty($_POST['nom']) && !empty($_POST['mdp'])){
-    require ('');
-
-
-
-
+require ('../Modele/Connexion.php')
+if(testConnexion($_POST['nom'], $_POST['mdp'])){
+    require ('url');
+} else {
 
 }
 
