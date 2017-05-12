@@ -7,7 +7,7 @@
 <body>
 <?php
 require('../Modele/UC n9 Choix Etage.php');
-?>
+
 
 for ($compteur = 0; $compteur = $nbetage[1]; $compteur++)
 {
@@ -17,7 +17,6 @@ for ($compteur = 0; $compteur = $nbetage[1]; $compteur++)
     </p>
 </div>
 }
-
-
+?>
 </body>
 </html>
