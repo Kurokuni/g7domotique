@@ -8,45 +8,14 @@
 <?php
 require('../Modele/UC n9 Choix Etage.php');
 ?>
-if ($etage_ == 1)
+
+for ($compteur = 0; $compteur = $nbEtage; $compteur++)
 {
-    <div class="bouton">
+<div class="bouton">
     <p>
-    <a href="#">Bouton</a>
+        <a href="#">Bouton</a>
     </p>
-    </div>
-}
-if ($etage_0 == 1)
-{
-    <div class="bouton">
-    <p>
-    <a href="#">Bouton</a>
-    </p>
-    </div>
-}
-if ($etage_1 == 1)
-{
-    <div class="bouton">
-    <p>
-    <a href="#">Bouton</a>
-    </p>
-    </div>
-}
-if ($etage_2== 1)
-{
-    <div class="bouton">
-    <p>
-    <a href="#">Bouton</a>
-    </p>
-    </div>
-}
-if ($etage_2== 1)
-{
-    <div class="bouton">
-    <p>
-    <a href="#">Bouton</a>
-    </p>
-    </div>
+</div>
 }
 
 </body>
