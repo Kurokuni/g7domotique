@@ -9,8 +9,3 @@ require('../Else/connexionDB.php');
     $nbetage = $etage -> fetch();//recuperer la donner de l'objet
     print_r($nbetage);
 ?>
-
-
-
-
-
