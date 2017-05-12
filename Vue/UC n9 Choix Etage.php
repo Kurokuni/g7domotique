@@ -18,5 +18,6 @@ for ($compteur = 0; $compteur = $nbetage[1]; $compteur++)
 </div>
 }
 
+
 </body>
 </html>
