@@ -9,7 +9,7 @@
 require('../Modele/UC n9 Choix Etage.php');
 ?>
 
-for ($compteur = 0; $compteur = $nbEtage; $compteur++)
+for ($compteur = 0; $compteur = $nbetage[1]; $compteur++)
 {
 <div class="bouton">
     <p>
