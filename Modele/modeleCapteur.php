@@ -18,7 +18,7 @@ print_r($data);*/
 $SeeData='command';
 
 function getArg($Arg) {
-    require('../else/connexionDB.php');
+    require('../Else/ConnexionDB.php');
     $requ=$conn->prepare("SELECT $Arg FROM actionneur");
     $requ->execute();
     echo'<br>';
