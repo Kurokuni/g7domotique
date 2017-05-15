@@ -6,9 +6,7 @@
 </head>
 <body>
 
-<input type="button" value="RDC" onclick="alert('RDC')">
-<input type="button" value="1erEtage" onclick="alert('1erEtage')">
-
+<input type="button" value="Etage" onclick="alert('Etage')">
 
 </body>
 </html>
