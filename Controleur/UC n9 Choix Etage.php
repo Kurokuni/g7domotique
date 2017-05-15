@@ -2,13 +2,8 @@
 
 require('../Modele/UC n9 Choix Etage.php');/* on recupere ce que l'on a demander dans le modèle */
 
-for ($compteur = 0; $compteur < $nbetage[0]; $compteur++)
-{
-    require('../Vue/UC n9 Choix Etage.php');/* on recupere ce que l'on a demander dans la vue */
-}
+$GLOBALS['min'] = $nbetage[0]; // on stocke l'étage minimum dans une variable globale accessible dans tous les fichiers
+$GLOBALS['max'] = $nbetage[1]; // idem avec l'étage max
 
-for ($compteur = 0; $compteur < $nbetage[1]; $compteur++)
-{
-    require('../Vue/UC n9 Choix Etage.php');/* on recupere ce que l'on a demander dans la vue */
-}
-?>
+
+require('../Vue/UC n9 Choix Etage.php'); // On fait appel à la vue de choix d'étage.
