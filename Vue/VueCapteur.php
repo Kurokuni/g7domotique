@@ -16,18 +16,18 @@
         <th>power</th>
         <th>HAG</th>
         <th>IDroom</th>
+        <th>time</th>
     </tr>
 
     <tr>
-        <td><?=$data?></td>
-        <td>temp</td>
-        <td><?=$data?></td>
-        <td><?=$data?></td>
-        <td><?=$data?></td>
-        <td><?=$data?></td>
+        <td><?=$data[0]?></td>
+        <td><?=$data[1]?></td>
+        <td><?=$data[2]?></td>
+        <td><?=$data[3]?></td>
+        <td><?=$data[4]?></td>
+        <td><?=$data[5]?></td>
+        <td><?=$data[6]?></td>
     </tr>
-
-
 
 </table>
 <article>

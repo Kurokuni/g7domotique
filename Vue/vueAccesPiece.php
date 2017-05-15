@@ -16,9 +16,9 @@
 <article>
     <h3>Accès aux pièces <!--requete php nom de la piece --></h3>
 
-    <a href="../Controleur/controleurPiece.php?table=room&ID=1">pièce 1</a><br/>
-    <a href="../Controleur/controleurPiece.php?table=room&ID=2">pièce 2</a><br/>
-    <a href="../Controleur/controleurPiece.php?table=room&ID=3">pièce 3</a><br/>
+    <a href="../Controleur/controleurPiece.php?table=room&ID=1&room=pièce 1">pièce 1</a><br/>
+    <a href="../Controleur/controleurPiece.php?table=room&ID=2&room=pièce 2">pièce 2</a><br/>
+    <a href="../Controleur/controleurPiece.php?table=room&ID=3&room=pièce 3">pièce 3</a><br/>
 
 
     <!-- peu être mettre une photo de la piece/ type de piece -->
