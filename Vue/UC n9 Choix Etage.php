@@ -1,22 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<?php
-require('../Modele/UC n9 Choix Etage.php');
+
+<input type="button" value="RDC" onclick="alert('RDC')">
+<input type="button" value="1erEtage" onclick="alert('1erEtage')">
 
 
-for ($compteur = 0; $compteur = $nbetage[1]; $compteur++)
-{
-<div class="bouton">
-    <p>
-        <a href="#">Bouton</a>
-    </p>
-</div>
-}
-?>
 </body>
 </html>
