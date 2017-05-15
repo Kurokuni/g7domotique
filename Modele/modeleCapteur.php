@@ -29,8 +29,8 @@ function getAllCapteur($ID) {
     echo'<br>';
     while($data=$requ->fetch())
     {
-        echo('id capteur:'); echo ($data['IDCAPTEUR']); echo(' ');
-        echo('name:');echo$data['name'];echo(' ');
+        $data1=$data['IDCAPTEUR']; echo('id capteur:'); echo ($data['IDCAPTEUR']); echo(' ');
+        $data2=$data['name']; echo('name:');echo$data['name'];echo(' ');
         echo('value:');echo $data['value' ]; echo(' ');
         echo('power:');echo $data['power' ]; echo(' ');  // affichage testes
         echo('HAG:');echo $data['HAG' ]; echo(' ');
@@ -39,9 +39,8 @@ function getAllCapteur($ID) {
     }
     echo'done';echo'<br>';
 
-    $datA=$requ->fetch(); // données dans un tableau
     $requ->closeCursor();
-    return $datA; // fonctionne pas !
+    return $data1; // fonctionne pas !
 }
 
 function insertIntoCapteur($IDCAPTEUR,$NaMe,$value,$power,$HAG,$IDROOM)

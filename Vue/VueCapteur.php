@@ -19,12 +19,12 @@
     </tr>
 
     <tr>
-        <td><?=$data['IDCAPTEUR']?></td>
-        <td><?=$data['name']?></td>
-        <td><?=$data['value']?></td>
-        <td><?=$data['power']?></td>
-        <td><?=$data['HAG']?></td>
-        <td><?=$data['IDROOM']?></td>
+        <td><?=$data?></td>
+        <td>temp</td>
+        <td><?=$data?></td>
+        <td><?=$data?></td>
+        <td><?=$data?></td>
+        <td><?=$data?></td>
     </tr>
 
 
