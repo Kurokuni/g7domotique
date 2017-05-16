@@ -8,14 +8,14 @@
 <header>
 
 </header>
-<form action="../Controleur/Connexion.php" method="post">
+<form action='../Controleur/Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
     Mot de passe: <input type="text" name='mdp'><br>
-    <input type="submit">
+    <input type='submit'>
 </form>
 <?php
-if ($erreur){
-    echo "Nom de compte ou mot de passe incorrecte!";
+if (isset($erreur)){
+    echo 'Nom de compte ou mot de passe incorrect!';
 }
 ?>
 <a href="url">Crée un compte.</a>
