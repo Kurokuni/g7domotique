@@ -8,7 +8,7 @@
 <header>
 
 </header>
-<form action='../Controleur/Connexion.php' method='post'>
+<form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
     Mot de passe: <input type="text" name='mdp'><br>
     <input type='submit'>

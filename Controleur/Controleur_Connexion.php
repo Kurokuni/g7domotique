@@ -1,5 +1,5 @@
 <?php
-require ('../Modele/Connexion.php');
+require ('../Modele/Modele_Connexion.php');
 
 $Nom=$_POST['nom'];
 $Mdp=$_POST['mdp'];
@@ -8,6 +8,6 @@ if($test){
     //require la page après être connecté
 } else {
 $erreur=true;
-require ('../Vue/Connexion.php');
+require ('../Vue/Vue_Connexion.php');
 }
 ?>
