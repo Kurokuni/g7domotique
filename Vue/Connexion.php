@@ -6,11 +6,11 @@
 </head>
 <body>
 <header>
-    <!--pour than-->
+
 </header>
 <form action="../Controleur/Connexion.php" method="post">
-    Nom: <input type="text" name="nom"><br>
-    Mot de passe: <input type="text" name="mdp"><br>
+    Nom: <input type="text" name='nom'><br>
+    Mot de passe: <input type="text" name='mdp'><br>
     <input type="submit">
 </form>
 <?php
