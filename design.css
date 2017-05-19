@@ -1,0 +1,107 @@
+section, header, footer {
+    margin:5px;
+}
+
+body {
+    background-color: #fbf8e5;
+    color: black;
+    font-family: 'Arial';
+}
+header {
+    background-color: black;
+    color: white;
+    font-family: 'Arial';
+}
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Arial';
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+.button2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+.button3:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.footer {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.footer1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.footer1:hover {
+    background-color: #4CAF50;
+}
+.footer2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.footer2:hover {
+    background-color: #4CAF50;
+}
+.footer3 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.footer3:hover {
+    background-color: #4CAF50;
+}
+.footer4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.footer4:hover {
+    background-color: #4CAF50;
+}
