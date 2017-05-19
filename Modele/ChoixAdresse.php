@@ -7,11 +7,6 @@ require('../Else/connexionDB.php');
 
 $adresse= $conn -> query('SELECT `street_num`, `street`, `city`,`zipcode`,`country`  FROM `adress_home` WHERE IDUSER=4'); /* Recupère les données des adresses de l'identité d'un utilisateur*/
 $nbadresse = $adresse -> fetchAll();/* On recupere la donner de l'objet*/
-foreach ($nbadresse as $element)
-{
-   echo $element[0]. $element[1]. $element[2]. $element[3]. $element[4]. '<br />';
-}
-//print_r($nbadresse);/* Permet d'afficher les données de la requete*/
-?>
+
 
 
