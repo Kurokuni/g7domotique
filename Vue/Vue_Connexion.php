@@ -10,7 +10,7 @@
 </header>
 <form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
-    Mot de passe: <input type="text" name='mdp'><br>
+    Mot de passe: <input type="password" name='mdp'><br>
     <input type='submit'>
 </form>
 <?php

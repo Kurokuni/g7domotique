@@ -5,7 +5,7 @@ $Nom=$_POST['nom'];
 $Mdp=$_POST['mdp'];
 $test=testConnexion($Nom, $Mdp);
 if($test){
-    //require la page après être connecté
+    require ('../Vue/');
 } else {
 $erreur=true;
 require ('../Vue/Vue_Connexion.php');
