@@ -2,7 +2,7 @@
 <?php
 
 //********************************* FONCTIONS POUR LE CAPTEUR******************************************
-
+require('../Else/connexionDB.php');
 
 function getArgCapteur($Arg,$ID) { // attribut et table
     require('../Else/connexionDB.php');

@@ -3,12 +3,14 @@
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="../design.css" />
     <title>Acces Capteurs</title>
 </head>
 <body>
 
-<!-- require header.php; -->
+<?php
+require('../Header.php');
+?>
 
 <!-- ajouter tout les infos communes -->
 

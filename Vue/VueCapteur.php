@@ -3,10 +3,14 @@
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="../design.css" />
     <title><?=$capteur?></title>
 </head>
 <body>
+
+<?php
+require('../Header.php');
+?>
 
 <article>
     <h3><?=$capteur?></h3>
@@ -47,6 +51,10 @@
 
 </article>
 <a href="../Controleur/controleurPiece.php?room=<?=$piece?>&ID=<?=$IDpiece?>">Retour à la piece</a>
+
+<?php
+require('../Footer.php');
+?>
 </body>
 
 </html>

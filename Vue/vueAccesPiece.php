@@ -3,12 +3,14 @@
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="../design.css" />
     <title>Acces Pièce</title>
 </head>
 <body>
 
-<!-- require header.php; -->
+<?php
+require ('../Header.php');
+?>
 
 <!-- ajouter tout les infos communes -->
 <?php
@@ -25,7 +27,7 @@ require('../Modele/modelePiece.php');
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <p>Pièce n°<?=$ListePiece[$var]?> :<a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>"><?=$ListePiece[$var+1]?></a></p>
+        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>"><?=$ListePiece[$var+1]?></a></p>
         <?php
         $var=$var+2;
     }
@@ -53,7 +55,9 @@ require('../Modele/modelePiece.php');
 
 </article>
 
-<!-- require footer.php -->
+<?php
+require('../Footer.php');
+?>
 
 </body>
 

@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <title>DomIsep</title>
-        <link rel="stylesheet" href="CSS/design.css"/>
+        <link rel="stylesheet" href="design.css"/>
     </head>
     <body>
         <a href="index.php">
