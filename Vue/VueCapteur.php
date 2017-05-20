@@ -4,39 +4,49 @@
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
     <link rel="stylesheet" href="" />
-    <title>Capteurs</title>
+    <title><?=$capteur?></title>
 </head>
 <body>
 
-<table>
-    <tr>
-        <th>IDcapteur</th>
-        <th>name</th>
-        <th>value</th>
-        <th>power</th>
-        <th>HAG</th>
-        <th>IDroom</th>
-        <th>time</th>
-    </tr>
-
-    <tr>
-        <td><?=$data[0]?></td>
-        <td><?=$data[1]?></td>
-        <td><?=$data[2]?></td>
-        <td><?=$data[3]?></td>
-        <td><?=$data[4]?></td>
-        <td><?=$data[5]?></td>
-        <td><?=$data[6]?></td>
-    </tr>
-
-</table>
 <article>
-    <p>ID du capteur:<?=$_GET['ID']?><br/>
-        valeur du capteur:<?=$data2 ?></p>  <!-- recuperée depuis controleurCapteur.php -->
+    <h3><?=$capteur?></h3>
 
+    <?php
+    echo($IDpiece);
+    echo($piece);
+    ?>
+    <p>Historique du capteur:</p>
+
+    <table>
+        <tr>
+            <th>capteur</th>
+            <th>valeur</th>
+            <th>date</th>
+        </tr>
+
+        <?php
+        $var=0;
+        $var1=count($TabHistoCapt);
+        $var2=30;
+        $VAR=min($var1,$var2);    // REFAIRE UNE FONCTION DANS LE CONTROLEUR QUI DYNAMISE LE SYSTEME
+        while($var<$VAR) {
+
+            ?>
+            <tr>
+                <td><?= $TabHistoCapt[$var] ?></td>
+                <td><?= $TabHistoCapt[$var + 1] ?></td>
+                <td><?= $TabHistoCapt[$var + 2] ?></td>
+            </tr>
+            <?php
+            $var = $var + 3;
+
+        }
+        ?>
+
+    </table>
 
 </article>
-
+<a href="../Controleur/controleurPiece.php?room=<?=$piece?>&ID=<?=$IDpiece?>">Retour à la piece</a>
 </body>
 
 </html>

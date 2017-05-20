@@ -5,7 +5,7 @@
 
 
 function getArgCapteur($Arg,$ID) { // attribut et table
-    require('../else/connexionDB.php');
+    require('../Else/connexionDB.php');
     $requ=$conn->prepare("SELECT $Arg FROM capteur WHERE IDCAPTEUR = $ID");
     $requ->execute();
     echo'<br>';
@@ -21,8 +21,23 @@ function getArgCapteur($Arg,$ID) { // attribut et table
     return $datAA;
 }
 
-function getAllCapteur($ID) {
-    require('../else/connexionDB.php');
+
+function getAllCapt($id)
+{ // on sort toutes les valeurs de tout les capteurs de la piece
+    require('../Else/connexionDB.php');                                 // renvoi une liste avec des infos qui vont 3 par 3
+    $requ = $conn->prepare("SELECT * FROM capteur WHERE IDROOM=$id ORDER BY name");
+    $requ->execute();
+    $tab = array();
+    while ($data = $requ->fetch()) {
+        $tab[] = $data['name'];
+        $tab[] = $data['value'];
+        $tab[] = $data['time'];
+    }
+    return $tab;
+}
+
+function getAllOneCapteur($ID) {  // on recupere TOUTES les données d'un capteur
+    require('../Else/connexionDB.php');
     $requ=$conn->prepare("SELECT * FROM capteur WHERE IDCAPTEUR = $ID");
     $requ->execute(); // requete SQL
     $tab=array();
@@ -30,12 +45,12 @@ function getAllCapteur($ID) {
     echo'<br>';
     while($data=$requ->fetch())
     {
-        $tab[]=$data['IDCAPTEUR']; echo('id capteur:'); echo ($data['IDCAPTEUR']); echo(' ');
-        $tab[]=$data['name']; echo('name:');echo$data['name'];echo(' ');
-        $tab[]=$data['value'];echo('value:');echo $data['value' ]; echo(' ');
-        $tab[]=$data['power'];echo('power:');echo $data['power' ]; echo(' ');  // affichage testes
-        $tab[]=$data['HAG'];echo('HAG:');echo $data['HAG' ]; echo(' ');
-        $tab[]=$data['IDROOM'];echo('IDROOM:');echo $data['IDROOM' ]; echo(' ');
+        $tab[]=$data['IDCAPTEUR'];
+        $tab[]=$data['name'];
+        $tab[]=$data['value'];
+        $tab[]=$data['power'];  // affichage testes
+        $tab[]=$data['HAG'];
+        $tab[]=$data['IDROOM'];
         $tab[]=$data['time'];
         echo'<br>';
     }
@@ -45,18 +60,26 @@ function getAllCapteur($ID) {
     return $tab; // fonctionne pas !
 }
 
-function insertIntoCapteur($IDCAPTEUR,$NaMe,$value,$power,$HAG,$IDROOM)
+function insertIntoCapteur($IDCAPTEUR,$NaMe,$value,$power,$HAG,$IDROOM,$time)
 {
-    require('../else/connexionDB.php');
-    $requ = $conn->prepare("INSERT INTO `capteur`(`IDCAPTEUR`, `name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES ($IDCAPTEUR,'thermometre',$value,$power,$HAG,$IDROOM,NOW())");
+    require('../Else/connexionDB.php');
+    echo $NaMe;
+    $requ = $conn->prepare("INSERT INTO `capteur`(`IDCAPTEUR`, `name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:IDCAPT,:NAME,:value,:power,:HAG,:IDROOM,:DATE)");
+    $requ->bindParam(':IDCAPT',$IDCAPTEUR,PDO::PARAM_INT);
+    $requ->bindParam(':NAME',$NaMe,PDO::PARAM_STR,20);
+    $requ->bindParam(':value',$value,PDO::PARAM_INT);
+    $requ->bindParam(':power',$power,PDO::PARAM_INT);
+    $requ->bindParam(':HAG',$HAG,PDO::PARAM_INT);
+    $requ->bindParam(':IDROOM',$IDROOM,PDO::PARAM_INT);
+    $requ->bindParam(':DATE',$time,PDO::PARAM_INT);
     $requ->execute();                   // ERREUR A CORRIGER*****************************************************************
-    //$t = date('Y-m-d H:i:s'); inserer une horraire
+    //$t = date('Y-m-d H:i:s'); inserer un horaire
     echo('élement ajouté');
 
 }
 
 function deleteFromCapteur($IDCAPTEUR){
-    require('../else/connexionDB.php');
+    require('../Else/connexionDB.php');
     $requ = $conn->prepare("DELETE FROM `capteur` WHERE IDCAPTEUR=$IDCAPTEUR");
     $requ->execute();
     echo('ligne supprimée');
@@ -66,34 +89,13 @@ function deleteFromCapteur($IDCAPTEUR){
 ?>
 
 
-
 <?php
-
-
-
-
-?>
-
-<?php
-/*$SeeData='command';
-$tableDB='actionneur';
-$donnee=getArg($SeeData,$tableDB);*/
-
-?>
-
-<?php
-/*require('../else/connexionDB.php');
+/*require('../Else/connexionDB.php');
 $donneee=$conn->prepare('SELECT * FROM capteur WHERE IDCAPTEUR=1');
 $donneee->execute();
 $donnees = $donneee->fetch();
 var_dump($donnees);
 $donneee->closeCursor();*/
 ?>
-
-
-
-
-
-
 
 

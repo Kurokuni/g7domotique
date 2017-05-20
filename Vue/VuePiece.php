@@ -17,13 +17,24 @@
 <article>
     <h3><?=$piece?></h3>
 
-    <p>Valeurs des capteurs de la pièce:</p>
+    <?php
 
-        <p><?=$try2[0]?>: <?=$try2[1]?> °c<br/>
-            <?=$try3[0]?>: <?=$try3[1]?> lux</p>
+    $TabCaptPiece=CaptInRoom($id);
+    $cursor=0;
+    while($cursor<count($TabCaptPiece)){
+        ?>
+        <p><?=$TabCaptPiece[$cursor]?> : <?=$TabCaptPiece[$cursor+1]?>  <a href="../Controleur/controleurCapteur.php?capteur=<?=$TabCaptPiece[$cursor]?>&IDPiece=<?=$id?>&piece=<?=$piece?>">détails du capteur</a> </p>
+    <?php
+        $cursor=$cursor+2;
+    }
+    ?>
 
 
-    <p>Historique du capteur de temperature:</p>
+    <br/>
+    <?php
+    $TABHistoTemperature=CreerTableauHistorique('thermometre',$tab);
+    ?>
+    <p> Historique du capteur de température:</p>
     <table>
         <tr>
             <th>capteur</th>
@@ -31,28 +42,35 @@
             <th>date</th>
         </tr>
 
-            <?php
-            $var=0;
-            $var1=count($tab);
-            $var2=30;
-            $VAR=min($var1,$var2);
-            while($var<$VAR) {
+        <?php
+        $var=0;
+        $var1=count($TABHistoTemperature);
+        $var2=30;
+        $VAR=min($var1,$var2);    // REFAIRE UNE FONCTION DANS LE CONTROLEUR QUI DYNAMISE LE SYSTEME
+        while($var<$VAR) {
+
                 ?>
-        <tr>
-                <td><?=$tab[$var]?></td>
-                <td><?=$tab[$var+1]?></td>
-                <td><?=$tab[$var+2]?></td>
-        </tr>
+                <tr>
+                    <td><?= $TABHistoTemperature[$var] ?></td>
+                    <td><?= $TABHistoTemperature[$var + 1] ?></td>
+                    <td><?= $TABHistoTemperature[$var + 2] ?></td>
+                </tr>
                 <?php
                 $var = $var + 3;
-            }
-            ?>
+
+        }
+        ?>
 
     </table>
+    <br/>
+    <br/>
+    <a href="../Vue/vueAccesPiece.php">retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
     <p>retour au menu</p><!-- a changer en lien -->
 
 </article>
+
+
 
 <!-- require footer.php -->
 
