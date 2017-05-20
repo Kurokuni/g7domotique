@@ -13,6 +13,7 @@ require('../Header.php');
 ?>
 
 <!-- ajouter tout les infos communes -->
+<!-- nouveau code en esperant que ca fonctionne-->
 
 
 
