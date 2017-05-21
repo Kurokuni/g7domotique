@@ -14,7 +14,7 @@ if ($Mdp != $Mdp2){
 else {
     require ('../Modele/Modele_Inscription.php');
     ajout($Nom, $Prenom, $Mail, $Phone, $Mdp, $Pseudo, $Date);
-    require ('../Vue/');
+    require ('../Vue/Vue_Connexion.php');
 }
 
 ?>
