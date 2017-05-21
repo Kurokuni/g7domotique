@@ -64,6 +64,26 @@ require('../Header.php');
         ?>
 
     </table>
+
+    <br/>
+    <br/>
+    <p>Ajouter un capteur:</p>
+    <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
+        <label for="nameAjout">nom</label> : <input type="text" name="nameAjout" /><br/>
+        <label for="value">Valeur</label> : <input type="number" name="value" /><br/>
+        <label for="power">état du capteur (0/1)</label> : <input type="number" name="power" /><br/>
+        <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
+        <input type="submit" value="Envoyer" />
+    </form>
+    <br/>
+
+    <p>Supprimer un capteur:</p>
+    <form action="../Controleur/controleurCapteur.php" method="post">
+        <label for="nameSuppr">nom du capteur a supprimer</label> : <input type="text" name="nameSuppr"  /><br/>
+        <label for="numberSuppr">numéro du capteur à supprimer</label> : <input type="number" name="numberSuppr" /><br/>
+        <input type="submit" value="Envoyer" />
+    </form>
+    <br/>
     <br/>
     <br/>
     <a href="../Vue/vueAccesPiece.php?Home=Maison 1">retour aux choix de la pièce</a>

@@ -40,17 +40,38 @@ require ('../Vue/vueCapteur.php');*/
 // **************** DEBUT ****************
 
 
+
+
+if(isset($_POST['nameAjout']) && isset($_POST['value']) && isset($_POST['power']) && isset($_POST['HAG'])){
+    $name = $_POST['nameAjout'];
+    $id=$_GET['id'];
+    insertIntoCapteur($name,$_POST['value'],$_POST['power'],$_POST['HAG'],$id);
+    $varEtat='ajouté à';
+    require('../Vue/VueCapteurCree.php');
+
+}
+
+elseif(isset($_POST['nameSuppr']) && isset($_POST['numberSuppr'])){
+    $name=$_POST['nameSuppr'];
+    deleteFromCapteur($_POST['numberSuppr']);
+    $varEtat='supprimé de';
+    require('../Vue/VueCapteurCree.php');
+}
+
+else {
+
 // DEFINITION DES VARIABLES
-$capteur=$_GET['capteur'];
-$IDpiece=$_GET['IDPiece'];
-$piece=$_GET['piece'];
+    $capteur = $_GET['capteur'];
+    $IDpiece = $_GET['IDPiece'];
+    $piece = $_GET['piece'];
 
-$tab=getAllCapt($IDpiece);
+    $tab = getAllCapt($IDpiece);
 
-$TabHistoCapt=CreerTableauHistorique($capteur,$tab);
+    $TabHistoCapt = CreerTableauHistorique($capteur, $tab);
 
-require('../Vue/VueCapteur.php');
+    require('../Vue/VueCapteur.php');
 
+}
 ?>
 
 
