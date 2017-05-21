@@ -60,21 +60,22 @@ function getAllOneCapteur($ID) {  // on recupere TOUTES les données d'un capteu
     return $tab; // fonctionne pas !
 }
 
-function insertIntoCapteur($IDCAPTEUR,$NaMe,$value,$power,$HAG,$IDROOM,$time)
+function insertIntoCapteur($NaMe,$value,$power,$HAG,$IDROOM)
 {
     require('../Else/connexionDB.php');
-    echo $NaMe;
-    $requ = $conn->prepare("INSERT INTO `capteur`(`IDCAPTEUR`, `name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:IDCAPT,:NAME,:value,:power,:HAG,:IDROOM,:DATE)");
+    $requ1=$conn->query("SELECT max(IDCAPTEUR)as MAX FROM capteur");
+    $donnee=$requ1->fetch();
+    $IDCAPTEUR=$donnee['MAX']+1;
+    $requ = $conn->prepare("INSERT INTO `capteur`(`IDCAPTEUR`, `name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:IDCAPT,:NAME,:value,:power,:HAG,:IDROOM,NOW())");
     $requ->bindParam(':IDCAPT',$IDCAPTEUR,PDO::PARAM_INT);
     $requ->bindParam(':NAME',$NaMe,PDO::PARAM_STR,20);
     $requ->bindParam(':value',$value,PDO::PARAM_INT);
     $requ->bindParam(':power',$power,PDO::PARAM_INT);
     $requ->bindParam(':HAG',$HAG,PDO::PARAM_INT);
     $requ->bindParam(':IDROOM',$IDROOM,PDO::PARAM_INT);
-    $requ->bindParam(':DATE',$time,PDO::PARAM_INT);
-    $requ->execute();                   // ERREUR A CORRIGER*****************************************************************
+    //$requ->bindParam(':DATE',NOW(),PDO::PARAM_INT);
+    $requ->execute();
     //$t = date('Y-m-d H:i:s'); inserer un horaire
-    echo('élement ajouté');
 
 }
 
@@ -82,7 +83,6 @@ function deleteFromCapteur($IDCAPTEUR){
     require('../Else/connexionDB.php');
     $requ = $conn->prepare("DELETE FROM `capteur` WHERE IDCAPTEUR=$IDCAPTEUR");
     $requ->execute();
-    echo('ligne supprimée');
 
 }
 

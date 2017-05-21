@@ -11,7 +11,7 @@
 <p>La pièce <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
 
 
-<a href="../Vue/vueAccesPiece.php?Home=maison 1">Retour a la liste des pièces</a>
+<a href="../Vue/vueAccesPiece.php">Retour a la liste des pièces</a>
 
 </body>
 
