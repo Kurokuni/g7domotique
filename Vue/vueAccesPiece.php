@@ -17,6 +17,7 @@ require ('../Header.php');
 require('../Modele/modelePiece.php');
 ?>
 
+<h2><?=$_GET['Home']?></h2>
 
 <article>
     <h3>Accès aux pièces <!--requete php nom de la piece --></h3>
@@ -51,7 +52,7 @@ require('../Modele/modelePiece.php');
     </form>
     <br/>
     <!-- peu être mettre une photo de la piece/ type de piece -->
-    <p>retour au menu</p><!-- a changer en lien -->
+    <p><a href="../Accueil.php">retour au menu</a></p><!-- a changer en lien -->
 
 </article>
 

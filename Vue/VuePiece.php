@@ -66,7 +66,7 @@ require('../Header.php');
     </table>
     <br/>
     <br/>
-    <a href="../Vue/vueAccesPiece.php">retour aux choix de la pièce</a>
+    <a href="../Vue/vueAccesPiece.php?Home=Maison 1">retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
     <p>retour au menu</p><!-- a changer en lien -->
 
