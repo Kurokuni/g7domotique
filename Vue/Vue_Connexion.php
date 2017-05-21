@@ -18,7 +18,7 @@ if (isset($erreur)){
     echo 'Nom de compte ou mot de passe incorrect!';
 }
 ?>
-<a href="Vue_Inscription.html">Crée un compte.</a>
+<a href="Vue_Inscription.php">Crée un compte.</a>
 <a href="url">Mot de passe oublié !</a>
 </body>
 </html>
