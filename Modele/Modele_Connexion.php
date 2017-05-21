@@ -17,3 +17,5 @@ function testConnexion ($pseudo, $mdp)
         return false;
     }
 }
+
+?>
