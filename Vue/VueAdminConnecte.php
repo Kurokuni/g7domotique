@@ -2,20 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="../design.css" />
     <title>Titre</title>
 </head>
 
 <body>
-<p> Bonjour, ceci est la seconde page
+<?php
+require ('../Header.php');
+?>
 
-</p>
 
 
-<p>
-<h1 id="monancre2">
-    Ceci est un exemple d'accès à une balise
-</h1>
-</p>
 
+
+
+<?php
+require('../Footer.php');
+?>
 </body>
 </html>
