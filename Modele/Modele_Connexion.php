@@ -12,10 +12,13 @@ function testConnexion ($pseudo, $mdp)
     $data2 = $requ2->fetch();
     $var2=$data2['IDUSER'];
     if ($var1 = $var2){
+        $requ3 = $conn->prepare("SELECT 'role' FROM user WHERE IDUSER = $var2");
+        $requ3->execute();
+        $data3 = $requ3->fetch();
+        $var3=$data3['role'];
         return true;
     } else {
         return false;
     }
 }
-
 ?>
