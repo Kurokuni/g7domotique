@@ -16,7 +16,7 @@
     <label>Mot de passe: <input type="password" name="mdp"/></label><br/>
     <label>Confirmation du mot de passe: <input type="password" name="mdp2"/></label><br/>
     <label>Pseudo: <input type="text" name="pseudo"/></label><br/>
-    <label>Date de naissance: <input type="number" name="date"/></label><br/>
+    <label>Date de naissance: <input type="date" name="date"/></label><br/>
     <input type="submit" value="Inscription"/>
 </form>
 <?php
