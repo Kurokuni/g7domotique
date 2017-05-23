@@ -34,6 +34,7 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
 
 
 
+
 for($i=0, $size=count($data_tab); $i<$size; $i++){
 // décodage avec sscanf
     list($t[$i], $o[$i], $r[$i], $c[$i], $n[$i], $v[$i], $a[$i], $x[$i], $year[$i], $month[$i], $day[$i], $hour[$i], $min[$i], $sec[$i]) = sscanf($data_tab[$i],"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
