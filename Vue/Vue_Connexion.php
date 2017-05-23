@@ -27,7 +27,7 @@ if (isset($erreur)){
 }
 ?>
 <a href="Vue_Inscription.php">Crée un compte.</a>
-<a href="url">Mot de passe oublié !</a>
+<a href="VueMotDePasseOublier.php">Mot de passe oublié !</a>
 
 <!-- sauts de ligne a enlever si possible en modifiant le css du footer -->
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
