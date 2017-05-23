@@ -10,6 +10,8 @@
 <?php
 require ('../Header.php');
 ?>
+<a href="../Vue/VueUserConnecte.php">Accéder à vos maison.</a>
+<a href="../Vue/VueModifierMotDePasseAC.php">Modifier le mot de passe d'un client.</a>
 
 
 
