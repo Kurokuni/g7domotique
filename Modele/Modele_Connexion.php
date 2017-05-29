@@ -1,6 +1,4 @@
 <?php
-print_r($_POST);
-
 function testConnexion ($pseudo, $mdp)
 {
     require_once '../Else/connexionDB.php';
