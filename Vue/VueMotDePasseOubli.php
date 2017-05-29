@@ -12,7 +12,7 @@ require ('../Header.php');
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
         <legend>Veuiller entrer le e-mail de votre compte :</legend>
-        E-mail: <input type="email" name='mail'><br>
+        E-mail: <input type="email" name='e-mail'><br>
         <input type='submit'>
     </fieldset>
 </form>

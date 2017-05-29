@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../design.css" />
-    <title>Titre</title>
+    <title>Admin</title>
 </head>
 
 <body>
