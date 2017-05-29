@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +11,18 @@
 <body>
 <?php
 require('../Header.php');
-
+if ($role==2){
+    $Mod = true;
+} else {
+    $Mod = false;
+}
 ?>
 
 <div contenteditable= $Mod >
     Ce texte peut être édité par l'utilisateur.
 </div>
 <?php
-if ($role==2){
-    $Mod = true;
-} else {
-    $Mod = false;
-}
+
 require('../Footer.php');
 ?>
 </body>

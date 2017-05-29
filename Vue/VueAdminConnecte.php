@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +15,7 @@ require ('../Header.php');
 ?>
 <a href="../Vue/VueUserConnecte.php">Accéder à vos maison.</a>
 <a href="../Vue/VueModifierMotDePasseAC.php">Modifier le mot de passe d'un client.</a>
-
+<a href="../Vue/ConditionDUtilisation.php">Modifier les condition d'utilisation.</a>
 
 
 
