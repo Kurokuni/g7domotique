@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head><!-- head contient tout ce qui est en entete de la page -->
