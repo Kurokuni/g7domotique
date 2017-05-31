@@ -3,7 +3,6 @@ require ('../Modele/Modele_Connexion.php');
 $Nom=$_POST['nom'];
 $Mdp=$_POST['mdp'];
 $Condi=$_POST['cond'];
-
 if ($Condi!=true){
     $erreur2 = true;
     require('../Vue/Vue_Connexion.php');
@@ -13,13 +12,22 @@ if ($Condi!=true){
         $role = role($Nom);
         switch ($role) {
             case "1":
-                require('../Vue/VueUserConnecte.php');
+                $Nom=$_POST['nom'];
+                $Mdp=$_POST['mdp'];
+                $adress=getHomePrincipale($Nom);
+                require ('../Controleur/controleurMaison.php');
                 break;
             case "2":
-                require('../Vue/VueAdminConnecte.php');
+                $Nom=$_POST['nom'];
+                $Mdp=$_POST['mdp'];
+                $adress=getHomePrincipale($Nom);
+                require ('../Controleur/controleurMaison.php');
                 break;
             default:
-                require('../Vue/VueUserConnecte.php');
+                $Nom=$_POST['nom'];
+                $Mdp=$_POST['mdp'];
+                $adress=getHomePrincipale($Nom);
+                require ('../Controleur/controleurMaison.php');
         }
     } else {
         $erreur = true;

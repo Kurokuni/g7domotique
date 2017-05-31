@@ -21,14 +21,23 @@ require('../Header.php');
 
     <?php
 
-    $TabCaptPiece=CaptInRoom($id);
+    /*$TabCaptPiece=CaptInRoom($id);
     $cursor=0;
     while($cursor<count($TabCaptPiece)){
         ?>
         <p><?=$TabCaptPiece[$cursor]?> : <?=$TabCaptPiece[$cursor+1]?>  <a href="../Controleur/controleurCapteur.php?capteur=<?=$TabCaptPiece[$cursor]?>&IDPiece=<?=$id?>&piece=<?=$piece?>">détails du capteur</a> </p>
     <?php
         $cursor=$cursor+2;
+    }*/
+
+
+    $x=0;
+    foreach($tabcapteurs as $ligne) {
+        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>">supprimer</a><?php
+        echo( ' ' .'<br>');
+        $x++;
     }
+
     ?>
 
 
@@ -77,12 +86,8 @@ require('../Header.php');
     </form>
     <br/>
 
-    <p>Supprimer un capteur:</p>
-    <form action="../Controleur/controleurCapteur.php" method="post">
-        <label for="nameSuppr">nom du capteur a supprimer</label> : <input type="text" name="nameSuppr"  /><br/>
-        <label for="numberSuppr">numéro du capteur à supprimer</label> : <input type="number" name="numberSuppr" /><br/>
-        <input type="submit" value="Envoyer" />
-    </form>
+
+
     <br/>
     <br/>
     <br/>

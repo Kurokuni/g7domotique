@@ -25,14 +25,16 @@ function getArgCapteur($Arg,$ID) { // attribut et table
 function getAllCapt($id)
 { // on sort toutes les valeurs de tout les capteurs de la piece
     require('../Else/connexionDB.php');                                 // renvoi une liste avec des infos qui vont 3 par 3
-    $requ = $conn->prepare("SELECT * FROM capteur WHERE IDROOM=$id ORDER BY name");
+    $requ = $conn->prepare("SELECT capteur.name,capteur.value,data.time FROM capteur JOIN data ON capteur.IDCAPTEUR=data.IDCAPTEUR WHERE IDROOM=$id ORDER BY name");
     $requ->execute();
     $tab = array();
+
     while ($data = $requ->fetch()) {
-        $tab[] = $data['name'];
-        $tab[] = $data['value'];
-        $tab[] = $data['time'];
+        $tab[] = $data['capteur.name'];
+        $tab[] = $data['capteur.value'];
+        $tab[] = $data['data.time'];
     }
+
     return $tab;
 }
 
@@ -63,11 +65,7 @@ function getAllOneCapteur($ID) {  // on recupere TOUTES les données d'un capteu
 function insertIntoCapteur($NaMe,$value,$power,$HAG,$IDROOM)
 {
     require('../Else/connexionDB.php');
-    $requ1=$conn->query("SELECT max(IDCAPTEUR)as MAX FROM capteur");
-    $donnee=$requ1->fetch();
-    $IDCAPTEUR=$donnee['MAX']+1;
-    $requ = $conn->prepare("INSERT INTO `capteur`(`IDCAPTEUR`, `name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:IDCAPT,:NAME,:value,:power,:HAG,:IDROOM,NOW())");
-    $requ->bindParam(':IDCAPT',$IDCAPTEUR,PDO::PARAM_INT);
+    $requ = $conn->prepare("INSERT INTO `capteur`(`name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:NAME,:value,:power,:HAG,:IDROOM,NOW())");
     $requ->bindParam(':NAME',$NaMe,PDO::PARAM_STR,20);
     $requ->bindParam(':value',$value,PDO::PARAM_INT);
     $requ->bindParam(':power',$power,PDO::PARAM_INT);

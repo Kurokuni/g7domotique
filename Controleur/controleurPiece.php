@@ -30,6 +30,10 @@ else {
  //   $table = $_GET['table'];
     $id = $_GET['ID'];
     $piece = $_GET['room'];
+
+    $tabcapteurs=CapteINroom($id);
+    $tabvalues=lastData($id);
+
 // VARIABLES DU POST
 
 
@@ -70,17 +74,6 @@ else {
     }
 
 
-// TESTS DES FONCTIONS ICI
-    /*echo('hello <br>');
-
-    $try=AfficheTab($tab);   // tests sur le controleur, à supprimer à terme
-    echo('<br>');
-    echo('<br>');
-    $try2=latestData('thermometre',$id);
-    echo($try2[0]);echo('  ');echo($try2[1]);echo(' °c');
-    echo('<br>');
-    $try3=latestData('luxmetre',$id);
-    echo($try3[0]);echo('  ');echo($try3[1]);echo(' lux');*/
 
 
     require('../Vue/VuePiece.php');
