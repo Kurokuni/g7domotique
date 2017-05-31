@@ -7,6 +7,11 @@ $Mdp=$_POST['mdp'];
 $Mdp2=$_POST['mdp2'];
 $Pseudo=$_POST['pseudo'];
 $Date=$_POST['date'];
+$Condi=$_POST['cond'];
+if ($Condi!=true){
+    $erreur2 = true;
+    require('../Vue/Vue_Inscription.php');
+}
 if ($Mdp != $Mdp2){
     $MdpDiff = true;
     require ('../Vue/Vue_Inscription.php');
