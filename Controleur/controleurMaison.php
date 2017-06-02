@@ -2,9 +2,9 @@
 
 require('../Modele/modeleMaison.php');
 
-$IDUSER=getIDuser($Nom);
+$_SESSION["IDUSER"]=getIDuser($Nom);
 
-$listeMaison=getAddress($IDUSER);
+$listeMaison=getAddress($_SESSION["IDUSER"]);
 
 
 require('../Vue/VueAccesMaison.php');
