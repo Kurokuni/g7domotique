@@ -15,14 +15,14 @@ session_start();
 <br/>
 <br/>
 <br/>
-<a href="ChangerMotDePasse.html">Changer le mot de passe</a>
+<a href="ChangerMotDePasse.php">Changer le mot de passe</a>
 
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<a href="ChangerPhotoDeProfil.html">Changer photo de profil</a>
+<a href="ChangerPhotoDeProfil.php">Changer photo de profil</a>
 
 <br/>
 <br/>
