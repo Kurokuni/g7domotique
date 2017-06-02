@@ -11,7 +11,7 @@ session_start();
 <body>
 <?php
 require('../Header.php');
-if ($role==2){
+if ($_SESSION["role"]==2){
     $Mod = true;
 } else {
     $Mod = false;
@@ -22,7 +22,6 @@ if ($role==2){
     Ce texte peut être édité par l'utilisateur.
 </div>
 <?php
-
 require('../Footer.php');
 ?>
 </body>
