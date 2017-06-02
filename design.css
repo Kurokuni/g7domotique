@@ -10,6 +10,50 @@ body {
     min-height: 100%;
     height: 100%;
 }
+image{
+    position:fixed;
+    width:100%;
+    opacity: 0.8;
+}
+.loginForm {
+    position: absolute;
+    top: 350px;
+    left: 0;
+    width: 98%;
+}
+.loginForm {
+    color: white;
+    font: bold 18px/20px Arial, Sans-Serif;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    padding:5px 10px;
+    background: #D3D3D3;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+h2 span {
+    color:#ffffff;
+}
+h3 {
+    color:#ffffff;
+}
 header {
     background-color: transparent;
     color: #ffffff;
@@ -135,7 +179,7 @@ footer {
     appearance: none;
 }
 
-.footer-distributed{
+.footer{
     background-color: #292c2f;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -147,7 +191,7 @@ footer {
     margin-top: 20px;
 }
 
-.footer-distributed .footer-left p{
+.footer .footer-left p{
     color:  #8f9296;
     font-size: 10px;
     margin: 0;
@@ -155,7 +199,7 @@ footer {
 
 /* Footer links */
 
-.footer-distributed p.footer-links{
+.footer p.footer-links{
     font-size:18px;
     font-weight: bold;
     color:  #ffffff;
@@ -163,20 +207,20 @@ footer {
     padding: 0;
 }
 
-.footer-distributed p.footer-links a{
+.footer p.footer-links a{
     display:inline-block;
     line-height: 1.8;
     text-decoration: none;
     color:  inherit;
 }
 
-.footer-distributed .footer-right{
+.footer .footer-right{
     font-size: 10px;
     margin:0;
     color:#8f9296
 }
 
-.footer-distributed .footer-right a{
+.footer .footer-right a{
     float:right;
     font-weight:bold;
     display: inline-block;
