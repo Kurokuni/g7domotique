@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <footer class="footer-distributed">
+    <footer class="footer">
 
         <div class="footer-right">
             <a href="#"> Site de l'entreprise Domisep </a>
