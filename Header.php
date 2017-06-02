@@ -16,9 +16,9 @@
         <a href="Accueil.php"> <img src="Images/Logo.png" style="width:10%" alt="Logo DomIsep"/> </a>
                 <div class="header_barre">
 
-                    <nav>
+                    <!--<nav>
                         <a href="#">Se Connecter</a>
-                    </nav>
+                    </nav>  -->
 
                     <form method="get" action="#">
                         <input type="search" placeholder="Search!" name="search">
@@ -26,6 +26,6 @@
 
                 </div>
     </header>
-    <img align="middle" src ="Images/Accueil.jpg" style="width:100%;height:100%;" alt="Photo Accueil"/>
+    <img align="middle" src ="Images/Accueil.png" style="width:100%;height:100%;" alt="Photo Accueil"/>
     </body>
 </html>
