@@ -17,7 +17,12 @@ if ($_SESSION["role"]==2){
     $Mod = false;
 }
 ?>
+<?php
+echo ''
 
+
+
+?>
 <div contenteditable= $Mod >
     Ce texte peut être édité par l'utilisateur.
 </div>
