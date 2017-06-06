@@ -11,7 +11,7 @@ $headers = 'Content-type: text/html; charset=utf-8' . PHP_EOL;
 if (!mail($Mail, $Sujet, $Message, $headers)) {
     echo 'mail non envoyé';
 }else {
-    echo 'mail envoyer' . $Mail;
+    echo 'mail envoyer ' . $Mail;
 }
 //mail($Mail, $Sujet, $Message);
 function mail_utf8($to, $from_user, $from_email,
