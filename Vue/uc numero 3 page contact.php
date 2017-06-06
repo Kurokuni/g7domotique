@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 
 <html lang="fr">
