@@ -7,7 +7,7 @@
     <body>
 
     <a href="../index.php"> </a>
-            <?php include 'http://localhost/g7domotique-master/CSS/Header_Deconnecte.php';?>
+            <?php include '../CSS/Header_Deconnecte.php';?>
     <?php
     if(isset($erreur)){
         ?><p> Nom de compte ou mot de passe incorrect</p><?php
@@ -64,6 +64,6 @@
     <a href="Vue_Inscription.php">Crée un compte.</a>
     <a href="VueMotDePasseOublier.php">Mot de passe oublié !</a>
     -->
-            <?php include 'http://localhost/g7domotique-master/CSS/Footer.php';?>
+            <?php include '../CSS/Footer.php';?>
     </body>
 </html>
