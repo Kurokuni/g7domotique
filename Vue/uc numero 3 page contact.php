@@ -1,4 +1,9 @@
 
+<?php
+session_start();
+?>
+
+
 <html lang="fr">
 <head>
 
@@ -52,4 +57,5 @@ require('../Footer.php');
 ?>
 </body>
 </html>
+
 

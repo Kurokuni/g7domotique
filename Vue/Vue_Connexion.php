@@ -15,13 +15,11 @@ require('../Header.php');
 <form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
     Mot de passe: <input type="password" name='mdp'><br>
-    <input type="checkbox" name="cond" value="condit"> <a href="../Vue/ConditionDUtilisation.php">Condition générale d'utilisation</a> <br>
+
     <input type='submit'>
 </form>
 <?php
-if (isset($erreur2)){
-    echo "Veuillez accepter les condition générale d'utilisation";
-}
+
 if (isset($erreur)){
     echo 'Nom de compte ou mot de passe incorrect!';
 }
