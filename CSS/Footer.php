@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
         <title>DomIsep</title>
-        <link rel="stylesheet" href="design.css" />
+        <link rel="stylesheet" href="http://localhost/g7domotique-master/CSS/design.css" />
 </head>
 <body>
 
@@ -14,9 +14,9 @@
         <div class="footer-left">
 
             <p class="footer-links">
-                <a href="Vue/uc numero 3 page contact.html">Nous Contacter</a>
+                <a href="http://localhost/g7domotique-master/Vue/uc numero 3 page contact.html">Nous Contacter</a>
                 ·
-                <a href="Vue/mentionlégale.html">Mention Légale</a>
+                <a href="http://localhost/g7domotique-master/Vue/mentionlégale.html">Mention Légale</a>
             </p>
             <p align="center">G7Domotique &copy; 2017</p>
         </div>
