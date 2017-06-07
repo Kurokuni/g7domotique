@@ -32,7 +32,7 @@ if (isset($erreur)){
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

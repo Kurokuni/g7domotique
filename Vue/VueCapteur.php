@@ -59,7 +59,7 @@ require('../Header.php');
 <a href="../Controleur/controleurPiece.php?room=<?=$piece?>&ID=<?=$IDpiece?>">Retour à la piece</a>
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 

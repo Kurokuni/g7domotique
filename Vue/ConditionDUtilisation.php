@@ -30,7 +30,7 @@ echo ''
     Ce texte peut être édité par l'utilisateur.
 </div>
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

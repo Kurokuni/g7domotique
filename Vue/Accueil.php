@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <title>DomIsep</title>
-        <link rel="stylesheet" href="http://localhost/g7domotique-master/CSS/design.css"/>
+        <link rel="stylesheet" href="http://localhost/g7domotique/CSS/design.css"/>
     </head>
     <body>
 
@@ -19,7 +19,7 @@
                 <h3 class="panel-title"> Connection</h3>
             </div>
             <div class="panel-body">
-                <form action='http://localhost/g7domotique-master/Controleur/Controleur_Connexion.php' method='post' accept-charset="UTF-8" role="form">
+                <form action='http://localhost/g7domotique/Controleur/Controleur_Connexion.php' method='post' accept-charset="UTF-8" role="form">
                     <fieldset>
                         <div class ="form-group">
                             <input class="form-control" placeholder="Nom" name="nom" type="text">
@@ -28,8 +28,8 @@
                             <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="">
                         </div>
                         <input type="submit" value="Connection">
-                        <div class="Mdp"><a align="right" href="http://localhost/g7domotique-master/Vue/Vue_Inscription.php">Créer un compte</a>
-                        <a align="right" href="http://localhost/g7domotique-master/Vue/VueMotDePasseOublier.php">Mot de passe oublié</a>
+                        <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
+                        <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOublier.php">Mot de passe oublié</a>
                         </div>
                     </fieldset>
                 </form>

@@ -31,7 +31,7 @@ require ('../Header.php');
 
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 
 </body>
