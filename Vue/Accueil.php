@@ -49,7 +49,7 @@
         <p>Dans le cadre de son expansion et de la diversification de ses activit&eacute;s, Domisep souhaite proposer une gestion compl&egrave;te des habitations connect&eacute;es (immeubles et maisons) pour les particuliers. Domisep souhaite, pour ce faire, rassembler toutes les technologies de l'informatique, des t&eacute;l&eacute;communications et de l'&eacute;lectronique et les mettre au service de ses clients, gr&acirc;ce &agrave; un traitement optimis&eacute; des signaux et des informations.</p>
         <p>Domisep offre à chaqu'un de ses clients, la possibilité de se connecter en toute sécurité afin de piloter, de protéger son domicile et de réduire les factures depuis un ordinateur, un téléphone mobile ou une tablette.</p>
          </div>
-    
+
     </body>
     <footer><?php include '../CSS/Footer.php';?>
     </footer>
