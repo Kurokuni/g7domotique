@@ -15,7 +15,7 @@ session_start();
 require ('../Header.php');
 ?>
 
-<h2>bienvenue <?=$Nom?></h2>
+<h2>bienvenue <?=$_SESSION["nom"]?></h2>
 
 <br/>
 <p>Accedez à vos maison en un clic ici:</p>

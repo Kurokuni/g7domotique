@@ -5,7 +5,7 @@ $Mail=$_POST['e-mail'];
 $Mdp = MailDePasse($Mail);
 $Mail = 'jacques.burie@gmail.com';
 $Sujet = 'Récupération du mot de passe';
-$Message = 'Voici votre mit de passe Veuillez le noter quelque part.';
+$Message = 'Voici votre mot de passe Veuillez le noter quelque part.';
 $headers = "From: Sendmail Tests" . PHP_EOL;
 $headers = 'Content-type: text/html; charset=utf-8' . PHP_EOL;
 if (!mail($Mail, $Sujet, $Message, $headers)) {
