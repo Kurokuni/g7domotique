@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +33,10 @@ if (isset($erreur2)){
 if (isset($MdpDiff)){
 echo 'Mot de passe different';
 }
+?>
+
+<?php
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

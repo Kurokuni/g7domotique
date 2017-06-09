@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +37,9 @@ require('../Header.php');
 </article>
 
 <!-- require footer.php -->
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 
 </html>

@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,7 +13,7 @@ session_start();
 </head>
 <body>
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 ?>
 <form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
@@ -29,7 +32,7 @@ if (isset($erreur)){
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

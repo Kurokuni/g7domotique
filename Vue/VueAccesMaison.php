@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +14,7 @@ session_start();
 </head>
 <body>
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 
 echo($adress['street_num'].' '.$adress['street'].' '.$adress['city']);
 
@@ -23,14 +26,16 @@ require('../Controleur/controleurVueEnsemble.php')
 
 <?php
 foreach($listeMaison as $ligne){
-    ?><p><?=$ligne['city']?> <?=$ligne['street_num']?> <?=$ligne['street']?> <a href="../Vue/VueAccesPiece.php?Home=maison 1&id=1">acces ici</a><br/></p><?php
+    ?><p><?=$ligne['city']?> <?=$ligne['street_num']?> <?=$ligne['street']?> <a href="../Vue/VueAccesPiece.php?Home=maison 1&id=<?=$IDAdresse1?>">acces ici</a><br/></p><?php
 }
 ?>
 
-<?php
-require('../Footer.php');
-?>
+<a href="../Vue/UcNumero8ProfilClient.php?iduser=<?=getIDuser($Nom);?>">Modifier votre profile</a>
 
+
+<?php
+require('../CSS/Footer.php');
+?>
 
 </body>
 

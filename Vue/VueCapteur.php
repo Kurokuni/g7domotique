@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +15,7 @@ session_start();
 <body>
 
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 ?>
 
 <article>
@@ -56,7 +59,7 @@ require('../Header.php');
 <a href="../Controleur/controleurPiece.php?room=<?=$piece?>&ID=<?=$IDpiece?>">Retour à la piece</a>
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 

@@ -24,6 +24,6 @@ $_SESSION["nom"] = $Nom;
         }
     } else {
         $erreur = true;
-        require('../Vue/Vue_Connexion.php');
+        require('../Vue/Accueil.php');
     }
 ?>

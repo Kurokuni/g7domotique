@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,6 +17,8 @@ for ($etage = $GLOBALS['min'];$etage <= $GLOBALS['max'];$etage++){ // On créé 
     echo '<input type="button" value="Etage '.$etage.'" onclick="alert(\'Etage\')">'; // On concatène le numéro de l'étage dans la valeur du bouton
 }
 ?>
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 </html>

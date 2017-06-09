@@ -1,33 +1,55 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../design.css" />
-    <title>Connexion</title>
+    <title>modifier des paramètres</title>
 </head>
 <body>
-<?php
-require('../Header.php');
-if ($_SESSION["role"]==2){
-    $Mod = true;
-} else {
-    $Mod = false;
-}
-?>
-<?php
-echo ''
+<?php require('../CSS/Header_Connecte.php');?>
+<?php require('../Modele/ModeleAdministrateur.php'); ?>
+
+<form action="../Controleur/ControleurAdministrateur.php" method="get">
+
+    <label for="QuiSommesNous">Modifier le texte de présentation de l'entreprise</label> :<br/>
+<?php $vue=getQuiSommesNous();?>
+    <textarea name="QuiSommesNous" rows="10" cols=50"><?php echo($vue);?></textarea>
+
+    <br/>
+
+    <label for="numero">Modifier le numero de l'entreprise:</label><br/>
+    <?php $vue=getNumero();?>
+    <textarea name="numero" rows="10" cols="50"><?php echo($vue);?></textarea>
+
+    <br/>
+
+    <label name="adresse">Modifier l'adresse de l'entreprise:</label><br/>
+    <?php $vue=getAdresse();?>
+    <textarea name="adresse" rows="10" cols="50"><?php echo($vue);?></textarea>
+
+    <br/>
+
+    <label name="mail">Modifier le mail de l'entreprise:</label><br/>
+    <?php $vue=getMail();?>
+    <textarea name="mail" rows="10" cols="50"><?php echo($vue);?></textarea>
+
+    <br/>
+
+
+    <input type="submit" name="Envoyer"/>
+
+</form>
 
 
 
-?>
-<div contenteditable= $Mod >
-    Ce texte peut être édité par l'utilisateur.
-</div>
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

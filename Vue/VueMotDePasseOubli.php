@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,7 +13,7 @@ session_start();
 </head>
 <body>
 <?php
-require ('../Header.php');
+require ('../CSS/Header_Deconnecte.php');
 ?>
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
@@ -30,7 +33,7 @@ require ('../Header.php');
 
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 </body>
 </html>

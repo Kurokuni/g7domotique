@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +15,7 @@ session_start();
 <body>
 
 <?php
-require ('../Header.php');
+require ('../CSS/Header_Connecte.php');
 ?>
 
 <!-- ajouter tout les infos communes -->
@@ -22,16 +25,21 @@ require('../Modele/modelePiece.php');
 
 <h2><?=$_GET['Home']?></h2>
 
+<?php
+    $IDHOME=$_GET['id'];
+?>
+
+
 <article>
     <h3>Accès aux pièces <!--requete php nom de la piece --></h3>
     <!-- acces dynamique aux pieces -->
     <?php
-    $ListePiece=ListePiece();
+    $ListePiece=ListePiece($IDHOME);
     $nombrePiece=count($ListePiece); // nombre de piece + leurs ID
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>"><?=$ListePiece[$var+1]?></a></p>
+        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a></p>
         <?php
         $var=$var+2;
     }
@@ -55,14 +63,13 @@ require('../Modele/modelePiece.php');
     </form>
     <br/>
     <!-- peu être mettre une photo de la piece/ type de piece -->
-    <p><a href="../Accueil.php">retour au menu</a></p><!-- a changer en lien -->
+    <p><a href="Accueil.php">retour au menu</a></p><!-- a changer en lien -->
 
 </article>
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
-
 </body>
 
 </html>

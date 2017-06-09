@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,6 +20,8 @@ foreach ($nbadresse as $element)
 }
 
 ?>
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 </html>

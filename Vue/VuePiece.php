@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +15,7 @@ session_start();
 <body>
 
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 ?>
 
 <!-- ajouter tout les infos communes -->
@@ -21,6 +24,8 @@ require('../Header.php');
 
 <article>
     <h3><?=$piece?></h3>
+
+    <?php $IDHOME=$_GET['idhome'];?>
 
     <?php
 
@@ -82,7 +87,6 @@ require('../Header.php');
     <p>Ajouter un capteur:</p>
     <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
         <label for="nameAjout">nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="value">Valeur</label> : <input type="number" name="value" /><br/>
         <label for="power">état du capteur (0/1)</label> : <input type="number" name="power" /><br/>
         <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
         <input type="submit" value="Envoyer" />
@@ -94,7 +98,7 @@ require('../Header.php');
     <br/>
     <br/>
     <br/>
-    <a href="../Vue/vueAccesPiece.php?Home=Maison 1">retour aux choix de la pièce</a>
+    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
     <p>retour au menu</p><!-- a changer en lien -->
 
@@ -103,7 +107,7 @@ require('../Header.php');
 
 
 <?php
-require('../Footer.php');
+require('../CSS/Footer.php');
 ?>
 
 </body>

@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,7 @@ session_start();
 <br/> <!--saut de ligne pour aerer la présentation-->
 <?php
 foreach ($tabCapteurs as $ligne){
-$data=selectAverage($ligne['name']);
+$data=selectAverage($ligne['name'],$IDAdresse1);
 echo($ligne['name']. ' : ' .$data.'<br><br>');
 }
 
@@ -25,7 +28,9 @@ echo($ligne['name']. ' : ' .$data.'<br><br>');
 
 
 
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 
 </html>
