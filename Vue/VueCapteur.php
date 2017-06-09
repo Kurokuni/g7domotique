@@ -15,7 +15,7 @@ if(!isset($_SESSION['connexion'])){
 <body>
 
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 ?>
 
 <article>

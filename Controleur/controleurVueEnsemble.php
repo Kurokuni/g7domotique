@@ -1,13 +1,7 @@
 <?php
 
-/*require('../Modele/modeleMaison.php');*/
-
-//$id=$_GET['id'];
-
-
-$tabCapteurs=listeCapteurRoom(1);
+$tabCapteurs=listeCapteurRoom($IDAdresse1);
 echo('<br>');
-
 
 
 require('../Vue/VueGeneralMaison.php');

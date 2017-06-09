@@ -24,10 +24,10 @@ function CreerTableauHistorique($capteur, $tab) // requiere nom du capt et tab a
 
 
 
-if(isset($_POST['nameAjout']) && isset($_POST['value']) && isset($_POST['power']) && isset($_POST['HAG'])){
+if(isset($_POST['nameAjout'])  && isset($_POST['power']) && isset($_POST['HAG'])){
     $name = $_POST['nameAjout'];
     $id=$_GET['id'];
-    insertIntoCapteur($name,$_POST['value'],$_POST['power'],$_POST['HAG'],$id);
+    insertIntoCapteur($name,$_POST['power'],$_POST['HAG'],$id);
     $varEtat='ajouté à';
     require('../Vue/VueCapteurCree.php');
 

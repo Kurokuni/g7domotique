@@ -20,7 +20,7 @@ if(!isset($_SESSION['connexion'])){
 <br/> <!--saut de ligne pour aerer la présentation-->
 <?php
 foreach ($tabCapteurs as $ligne){
-$data=selectAverage($ligne['name']);
+$data=selectAverage($ligne['name'],$IDAdresse1);
 echo($ligne['name']. ' : ' .$data.'<br><br>');
 }
 
