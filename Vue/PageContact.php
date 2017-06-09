@@ -41,7 +41,7 @@ Adresse : <?php print($textAdresse) ?>
 </p>
 <br/>
 
-
+//jjj
 
 
 <!-- sauts de ligne a enlever si possible en modifiant le css du footer -->
