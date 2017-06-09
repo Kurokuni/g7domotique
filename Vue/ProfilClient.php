@@ -7,7 +7,7 @@ if(!isset($_SESSION['connexion'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="UcNumero8ProfilClient.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="ProfilClient.css" rel="stylesheet" type="text/css" media="all" />
     <meta charset="UTF-8">
     <title>Profil Client</title>
 </head>
