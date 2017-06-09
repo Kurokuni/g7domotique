@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <?php
-require('../Header.php');
+require('../CSS/Header_Connecte.php');
 ?>
 <form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>

@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <title>DomIsep</title>
-        <link rel="stylesheet" href="http://localhost/g7domotique-master/CSS/design.css" />
+        <link rel="stylesheet" href="design.css" />
         <style>
             img {
                 display: block;
@@ -12,20 +12,19 @@
     </head>
     <body>
     <header  class="header">
-        <h1 align="center"><a href="http://localhost/g7domotique-master//Vue/Accueil.php">Votre maison connectée partout</a></h1>
-                <div class="header_barre">
+        <h1 align="center"><a href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a></h1>
+        <div class="header_barre">
 
-                    <!--<nav>
-                        <a href="#">Se Connecter</a>
-                    </nav>  -->
+            <nav>
+                <a href="../Vue/Accueil.php">Se Deconnecter</a>
+            </nav>
 
-                    <form method="get" action="#">
-                        <input type="search" placeholder="Search!" name="search">
-                    </form>
+            <form method="get" action="#">
+                <input type="search" placeholder="Search!" name="search">
+            </form>
+        </div>
+        <a href="http://localhost/g7domotique/Vue/Accueil.php"> <img src="http://localhost/g7domotique/Images/Logo.png" style="width:10%" alt="Logo DomIsep"/> </a>
 
-                </div>
-        <a href="http://localhost/g7domotique-master//Vue/Accueil.php"> <img src="http://localhost/g7domotique-master//Images/Logo.png" style="width:10%" alt="Logo DomIsep"/> </a>
     </header>
-    <img align="middle" src ="http://localhost/g7domotique-master//Images/Accueil.png" style="width:100%;height:100%;" alt="Photo Accueil"/>
     </body>
 </html>

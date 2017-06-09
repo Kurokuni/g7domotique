@@ -34,10 +34,10 @@ function latestData($data,$id){   // on va chercher la valeur la plus recente de
 
 // fonctions pour l'affichage des pieces en dynamique*********************************************************************
 
-function ListePiece(){
+function ListePiece($id){
     require('../Else/connexionDB.php');
     $tab=array();
-    $requ=$conn->prepare("SELECT IDROOM, name FROM room");
+    $requ=$conn->prepare("SELECT IDROOM, name FROM room WHERE home=$id");  // id = id unique de la maison
     $requ->execute();
     while($quette=$requ->fetch()){
         $tab[]=$quette['IDROOM'];
