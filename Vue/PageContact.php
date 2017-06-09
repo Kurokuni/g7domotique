@@ -1,9 +1,11 @@
+
 <?php
 if(!isset($_SESSION['connexion'])){
     session_start();
     $_SESSION['connexion']=1;
 }
 ?>
+
 
 <html lang="fr">
 <head>
@@ -39,7 +41,7 @@ Adresse : <?php print($textAdresse) ?>
 </p>
 <br/>
 
-
+//jjj
 
 
 <!-- sauts de ligne a enlever si possible en modifiant le css du footer -->

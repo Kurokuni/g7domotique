@@ -7,3 +7,15 @@ body {
 
 }
 
+header {
+    background-color: black;
+    color: white;
+    font-family: 'Arial';
+}
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Arial';
+
+}
+
