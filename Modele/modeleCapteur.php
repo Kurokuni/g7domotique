@@ -62,12 +62,11 @@ function getAllOneCapteur($ID) {  // on recupere TOUTES les données d'un capteu
     return $tab; // fonctionne pas !
 }
 
-function insertIntoCapteur($NaMe,$value,$power,$HAG,$IDROOM)
+function insertIntoCapteur($NaMe,$power,$HAG,$IDROOM)
 {
     require('../Else/connexionDB.php');
-    $requ = $conn->prepare("INSERT INTO `capteur`(`name`, `value`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:NAME,:value,:power,:HAG,:IDROOM,NOW())");
+    $requ = $conn->prepare("INSERT INTO `capteur`(`name`, `power`, `HAG`, `IDROOM`,`time`) VALUES (:NAME,:power,:HAG,:IDROOM,NOW())");
     $requ->bindParam(':NAME',$NaMe,PDO::PARAM_STR,20);
-    $requ->bindParam(':value',$value,PDO::PARAM_INT);
     $requ->bindParam(':power',$power,PDO::PARAM_INT);
     $requ->bindParam(':HAG',$HAG,PDO::PARAM_INT);
     $requ->bindParam(':IDROOM',$IDROOM,PDO::PARAM_INT);

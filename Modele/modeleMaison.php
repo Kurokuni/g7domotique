@@ -21,10 +21,10 @@ function getAddress($IDUSER){
     return $data;
 }
 
-function selectAverage($capteur)
+function selectAverage($capteur,$idhome)
 {
     require('../Else/connexionDB.php');
-    $requ1 = $conn->prepare("SELECT AVG(value) AS avg FROM data WHERE name=:capteur");
+    $requ1 = $conn->prepare("SELECT AVG(data.value) AS avg FROM data JOIN capteur JOIN room ON data.IDCAPTEUR=capteur.IDCAPTEUR AND capteur.IDROOM=room.IDROOM WHERE data.name=:capteur AND room.home=$idhome");
     $requ1->bindParam(':capteur',$capteur,PDO::PARAM_STR,20);
     $requ1->execute();
     $data = $requ1->fetch();
@@ -36,16 +36,14 @@ function selectAverage($capteur)
 function adress1($IDuser){
     require('../Else/connexionDB.php');
 
-    $tab=array();
-
-    $requ1=$conn->prepare("SELECT IDADRESSE FROM adress_home WHERE IDUSER=$IDuser");
+    $requ1=$conn->prepare("SELECT IDADRESSE FROM adress_home WHERE IDUSER=$IDuser AND IDHOME=1");
     $requ1->execute();
 
     while($data=$requ1->fetch()){
-        $tab[]=$data['IDADRESSE'];
+        $resultat=$data['IDADRESSE'];
     }
 
-    return $tab;
+    return $resultat;
 }
 
 // cette fonction recupere la liste des capteurs de la maison
@@ -56,7 +54,6 @@ function listeCapteurRoom($IDadress){
     $requ1->execute();
 
     $data=$requ1->fetchAll();
-    /*print_r($data);*/
 
     return($data);
 }

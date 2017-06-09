@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <?php
-/**require ('../Header.php');*/
+require ('../CSS/Header_Deconnecte.php');
 ?>
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
