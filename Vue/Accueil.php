@@ -31,7 +31,7 @@
                         <input type="submit" value="Connection">
                         <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
                             .
-                        <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOublier.php">Mot de passe oublié</a>
+                        <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de passe oublié</a>
                         </div>
                     </fieldset>
                 </form>
