@@ -4,7 +4,7 @@
         <title>DomIsep</title>
         <link rel="stylesheet" href="http://localhost/g7domotique/CSS/design.css"/>
     </head>
-    <header><a href="../index.php"> </a>
+    <header>
         <?php include '../CSS/Header_Deconnecte.php';?>
     </header>
     <body>

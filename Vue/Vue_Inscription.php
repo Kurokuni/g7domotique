@@ -12,7 +12,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <header>
-
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 <form action='../Controleur/Controleur_Inscription.php' method="post">
     <label>Nom: <input type="text" name="nom"/></label><br/>
@@ -35,8 +35,7 @@ echo 'Mot de passe different';
 }
 ?>
 
-<?php
-require('../CSS/Footer.php');
-?>
 </body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

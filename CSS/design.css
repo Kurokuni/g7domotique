@@ -283,7 +283,13 @@ input[type=submit]:hover{
         line-height: 1.8;
     }
 }
+.PageContact{
+    display: block;
 
+    color: #ffffff;
+    font: Arial;
+    font-size: 15px;
+}
 
 a {
     outline: none;
