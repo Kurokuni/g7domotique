@@ -13,14 +13,14 @@ image{
 }
 .loginForm {
     position: absolute;
-    top: 200px;
+    top: 80px;
     left: 0;
     width: 98%;
 }
 .loginForm {
     color: white;
     font: bold 18px/20px Arial, Sans-Serif;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     padding: 10px;
 }
 .Inscription {
@@ -45,24 +45,27 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
-    padding:8px 10px;
+    padding:4px 8px;
     background: #D3D3D3;
     border:0 none;
     cursor:pointer;
-    -webkit-border-radius: 10px;
-    border-radius: 12px;
+    -webkit-border-radius: 8px;
+    border-radius: 10px;
 }
 input[type=submit]:hover{
     opacity: 0.8;
 }
 .Mdp{
     padding: 5px;
+    font-size:15px;
+    font-family: Arial;
 }
 
 .QuiSommeNous{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
+    margin-top: 280px;
 }
 
 .header {
