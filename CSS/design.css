@@ -3,7 +3,7 @@ section, header, footer {
 }
 
 body {
-    background-image: url("../Images/Background.png");
+    background-image: url("../Images/Accueil.png");
     background-size: cover;
     color: black;
     font-family: 'Arial';
@@ -70,7 +70,7 @@ h3 {
     color:#ffffff;
 }
 header {
-    background-color: transparent;
+    background-color: black;
     color: #ffffff;
     font-family: 'Arial';
     font-weight: bold;
@@ -80,7 +80,8 @@ footer {
     color: white;
     font-family: 'Arial';
     clear: both;
-    position: relative;
+    position: fixed;
+    margin: 0%;
 }
 
 .header h1{
@@ -203,7 +204,7 @@ footer {
     font: normal 16px sans-serif;
 
     padding: 5px 10px;
-    margin-top: 20px;
+    margin-top: 1px;
 }
 
 .footer .footer-left p{
