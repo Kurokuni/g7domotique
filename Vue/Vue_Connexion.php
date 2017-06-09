@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <?php
-require('../CSS/Header_Connecte.php');
+/*require('../Header.php');*/
 ?>
 <form action='../Controleur/Controleur_Connexion.php' method='post'>
     Nom: <input type="text" name='nom'><br>
@@ -26,8 +26,8 @@ if (isset($erreur)){
 }
 ?>
 <br>
-<a href="Vue_Inscription.php">Crée un compte.</a>
-<a href="VueMotDePasseOublier.php">Mot de passe oublié !</a>
+<a href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Crée un compte.</a>
+<a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOublier.php">Mot de passe oublié</a>
 <!-- sauts de ligne a enlever si possible en modifiant le css du footer -->
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
