@@ -37,7 +37,6 @@ foreach($listeMaison as $ligne){
 require('../CSS/Footer.php');
 ?>
 
-
 </body>
 
 </html>

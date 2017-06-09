@@ -20,6 +20,8 @@ foreach ($nbadresse as $element)
 }
 
 ?>
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 </html>

@@ -37,7 +37,9 @@ require('../Header.php');
 </article>
 
 <!-- require footer.php -->
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 
 </html>

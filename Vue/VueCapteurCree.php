@@ -18,7 +18,9 @@ if(!isset($_SESSION['connexion'])){
 
 
 <a href="../Vue/vueAccesPiece.php">Retour a la liste des pièces</a>
-
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 
 </html>

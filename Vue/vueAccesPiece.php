@@ -70,7 +70,6 @@ require('../Modele/modelePiece.php');
 <?php
 require('../CSS/Footer.php');
 ?>
-
 </body>
 
 </html>

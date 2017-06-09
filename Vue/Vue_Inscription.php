@@ -34,5 +34,9 @@ if (isset($MdpDiff)){
 echo 'Mot de passe different';
 }
 ?>
+
+<?php
+require('../CSS/Footer.php');
+?>
 </body>
 </html>
