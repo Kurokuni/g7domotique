@@ -1,15 +1,11 @@
-section, header, footer {
-    margin:5px;
-}
-
 body {
     background-image: url("../Images/Accueil.png");
     background-size: cover;
     color: black;
     font-family: 'Arial';
-    min-height: 100%;
-    height: 100%;
+    margin-top: 5%;
 }
+
 image{
     position:fixed;
     width:100%;
@@ -17,7 +13,7 @@ image{
 }
 .loginForm {
     position: absolute;
-    top: 350px;
+    top: 200px;
     left: 0;
     width: 98%;
 }
@@ -63,35 +59,26 @@ input[type=submit]:hover{
     padding: 5px;
 }
 
-h2 span {
-    color:#ffffff;
-}
-h3 {
-    color:#ffffff;
-}
-header {
-    background-color: black;
+.QuiSommeNous{
     color: #ffffff;
-    font-family: 'Arial';
-    font-weight: bold;
-}
-footer {
-    background-color: black;
-    color: white;
-    font-family: 'Arial';
-    clear: both;
-    position: fixed;
-    margin: 0%;
+    font: Arial;
+    font-size: 15px;
 }
 
-.header h1{
+.header {
     background-color:#292c2f;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-    padding: 10px 20px;
-    height: 60px;
+    padding: 10px;
+    height: 10%;
+    width: 100%;
     color: #ffffff;
-    box-sizing: border-box;
-    font-size: 30px;
+    font-size: 15px;
+    font-family: 'Arial';
+    font-weight: bold;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
 }
 
 .header .header_barre {
@@ -118,7 +105,7 @@ footer {
 
 .header .header_barre nav {
     font-weight: bold;
-    font: 40px Arial, sans-serif;
+    font: 30px Arial, sans-serif;
     line-height: 40px;
     float: left;
     margin: 0 0 0 30px;
@@ -144,8 +131,8 @@ footer {
     margin-left: 40px;
     border-radius: 3px;
     background-color:  #3a3c3e;
-    width: 44px;
-    height: 39px;
+    width: 22px;
+    height: 19px;
     cursor: pointer;
 
     -ms-user-select: none;
@@ -161,8 +148,8 @@ footer {
     content: '';
     border-radius: 50%;
     border: 2px solid #fff;
-    width: 9px;
-    height: 9px;
+    width: 5px;
+    height: 5px;
     top: 12px;
     left: 14px;
 }
@@ -171,8 +158,8 @@ footer {
     position: absolute;
     content: '';
     background-color: #fff;
-    width: 2px;
-    height: 8px;
+    width: 1px;
+    height: 4px;
     top: 22px;
     left: 26px;
     -webkit-transform: rotate(-44deg);
@@ -188,7 +175,7 @@ footer {
     border: none;
     width: 210px;
     border-radius: 2px 0 0 2px;
-    height: 39px;
+    height: 19px;
     box-sizing: border-box;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -201,10 +188,14 @@ footer {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: normal 16px sans-serif;
+    font: normal 15px sans-serif;
 
     padding: 5px 10px;
-    margin-top: 1px;
+    margin-top: 20px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
 .footer .footer-left p{
@@ -216,7 +207,7 @@ footer {
 /* Footer links */
 
 .footer p.footer-links{
-    font-size:18px;
+    font-size:15px;
     font-weight: bold;
     color:  #ffffff;
     margin: 0 0 10px;
@@ -240,7 +231,7 @@ footer {
     float:right;
     font-weight:bold;
     display: inline-block;
-    font-size: 18px;
+    font-size: 15px;
     color: #ffffff;
     margin: 0 0 10px;
     margin-left: 3px;
@@ -255,7 +246,7 @@ footer {
 
     .header-search .header-limiter h1 {
         float:none;
-        font-size: 24px;
+        font-size: 25px;
         line-height: 1;
     }
 
