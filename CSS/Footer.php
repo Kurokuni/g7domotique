@@ -14,7 +14,7 @@
         <div class="footer-left">
 
             <p class="footer-links">
-                <a href="http://localhost/g7domotique/Vue/uc numero 3 page contact.html">Nous Contacter</a>
+                <a href="http://localhost/g7domotique/Vue/PageContact.php">Nous Contacter</a>
                 .
                 <a href="http://localhost/g7domotique/Vue/mentionlégale.html">Mention Légale</a>
             </p>
