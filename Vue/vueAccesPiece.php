@@ -67,9 +67,9 @@ require('../Modele/modelePiece.php');
 
 </article>
 
+
+</body>
 <?php
 require('../CSS/Footer.php');
 ?>
-</body>
-
 </html>

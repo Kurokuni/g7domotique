@@ -8,11 +8,6 @@
 
     <a href="../index.php"> </a>
             <?php require('../CSS/Header_Deconnecte.php');?>
-    <?php
-    if(isset($erreur)){
-        ?><p> Nom de compte ou mot de passe incorrect</p><?php
-    }
-    ?>
     <div class ="loginForm">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -28,6 +23,11 @@
                             <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="">
                         </div>
                         <input type="submit" value="Connection">
+                        <?php
+                        if (isset($erreur)){
+                            echo 'Nom de compte ou mot de passe incorrect!';
+                        }echo 'Nom de compte ou mot de passe incorrect!';
+                        ?>
                         <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
                         <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de passe oublié</a>
                         </div>
@@ -36,11 +36,7 @@
             </div>
         </div>
     </div>
-    <?php
-    if (isset($erreur)){
-        echo 'Nom de compte ou mot de passe incorrect!';
-    }
-    ?>
+
 
         <h2>
             <span>
