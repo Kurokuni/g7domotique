@@ -8,13 +8,17 @@ if(!isset($_SESSION['connexion'])){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../design.css" />
+    <link rel="stylesheet" href="../CSS/design.css" />
     <title>Récupération de mot de passe</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
 <?php
 require ('../CSS/Header_Deconnecte.php');
 ?>
+<div class="MdpOublie">
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
         <legend>Veuiller entrer le e-mail de votre compte :</legend>
@@ -22,6 +26,7 @@ require ('../CSS/Header_Deconnecte.php');
         <input type='submit'>
     </fieldset>
 </form>
+</div>
 
 
 
@@ -36,4 +41,6 @@ require ('../CSS/Header_Deconnecte.php');
 require('../CSS/Footer.php');
 ?>
 </body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>
