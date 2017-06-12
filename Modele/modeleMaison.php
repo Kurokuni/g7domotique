@@ -24,11 +24,18 @@ function getAddress($IDUSER){
 function selectAverage($capteur,$idhome)
 {
     require('../Else/connexionDB.php');
-    $requ1 = $conn->prepare("SELECT AVG(data.value) AS avg FROM data JOIN capteur JOIN room ON data.IDCAPTEUR=capteur.IDCAPTEUR AND capteur.IDROOM=room.IDROOM WHERE data.name=:capteur AND room.home=$idhome");
+    $requ1 = $conn->prepare("SELECT data.value AS avg FROM data JOIN capteur JOIN room ON data.IDCAPTEUR=capteur.IDCAPTEUR AND capteur.IDROOM=room.IDROOM WHERE data.name=:capteur AND room.home=$idhome");
     $requ1->bindParam(':capteur',$capteur,PDO::PARAM_STR,20);
     $requ1->execute();
-    $data = $requ1->fetch();
-    $resultat = $data['avg'];
+    $result=0;
+    $x=0;
+    while($data=$requ1->fetch()){
+        $result=$result+$data['avg'];
+        $x++;
+        if($x==10){break;}
+    }
+    if($x==0){$x=1;}
+    $resultat = $result/$x;
     return $resultat;
 }
 

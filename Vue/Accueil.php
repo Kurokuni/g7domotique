@@ -1,3 +1,10 @@
+<?php
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -9,11 +16,7 @@
     </header>
     <body>
 
-    <?php
-    if(isset($erreur)){
-        ?><p> Nom de compte ou mot de passe incorrect</p><?php
-    }
-    ?>
+
     <div class ="loginForm">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -29,14 +32,15 @@
                             <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="">
                         </div>
                         <input type="submit" value="Connection">
+
+                        <?php
+                        if (isset($erreur)){
+                            echo 'Nom de compte ou mot de passe incorrect!';
+                        }
+                        ?>
                         <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
                             .
                         <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de passe oublié</a>
-                            <?php
-                            if (isset($erreur)){
-                                echo 'Nom de compte ou mot de passe incorrect!';
-                            }
-                            ?>
                         </div>
                     </fieldset>
                 </form>

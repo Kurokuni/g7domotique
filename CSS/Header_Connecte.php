@@ -18,7 +18,7 @@
                 <input type="search" placeholder="Search!" name="search">
             </form>
         </div>
-        <a href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
+        <a align="center" href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
 
 </header>
 </body>

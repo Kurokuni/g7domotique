@@ -27,10 +27,6 @@ echo($ligne['name']. ' : ' .$data.'<br><br>');
 ?>
 
 
-
-<?php
-require('../CSS/Footer.php');
-?>
 </body>
 
 </html>

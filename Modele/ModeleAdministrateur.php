@@ -112,4 +112,23 @@ function setMail($text){
     $requ1->execute();
 }
 
+function rechercheAdresseUser($texte){
+    require('../Else/connexionDB.php');
+    $requ1=$conn->prepare("SELECT user.name, user.lastname, adress_home.street_num, adress_home.street, adress_home.city, adress_home.zipcode, adress_home.country,adress_home.IDADRESSE FROM 
+                            user JOIN adress_home ON user.IDUSER=adress_home.IDUSER WHERE user.pseudo LIKE '%$texte%' OR user.lastname LIKE '%$texte%' OR adress_home.street LIKE '%$texte%'");
+    $requ1->execute();
+    $resultat=$requ1->fetchAll();
+    return $resultat;
+}
+
+
+function rechercheInfosUser ($texte){
+    require('../Else/connexionDB.php');
+    $requ1=$conn->prepare("SELECT name,lastname,email,phone_num,pseudo FROM user WHERE name LIKE '%$texte%' OR lastname LIKE '%$texte%' OR pseudo LIKE '%$texte%'");
+    $requ1->execute();
+    $resultat=$requ1->fetchAll();
+    return $resultat;
+}
+
+
 

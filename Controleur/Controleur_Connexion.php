@@ -1,4 +1,21 @@
 <?php
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscription</title>
+    </head>
+<body>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
+<div class="Connexion">
+<?php
 require ('../Modele/Modele_Connexion.php');
 $Nom=$_POST['nom'];
 $Mdp=$_POST['mdp'];
@@ -14,6 +31,8 @@ $_SESSION["nom"] = $Nom;
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":
+                $Nom=$_POST['nom'];
+                $Mdp=$_POST['mdp'];
                 require ('../Vue/VueAdminConnecte.php');
                 break;
             default:
@@ -27,3 +46,8 @@ $_SESSION["nom"] = $Nom;
         require('../Vue/Accueil.php');
     }
 ?>
+</div>
+</body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
+</html>
