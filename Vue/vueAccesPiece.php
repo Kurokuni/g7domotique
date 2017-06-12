@@ -9,14 +9,15 @@ if(!isset($_SESSION['connexion'])){
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../design.css" />
+    <link rel="stylesheet" href="../CSS/design.css" />
     <title>Acces Pièce</title>
 </head>
+
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 <body>
 
-<?php
-require ('../CSS/Header_Connecte.php');
-?>
 
 <!-- ajouter tout les infos communes -->
 <?php
@@ -69,7 +70,6 @@ require('../Modele/modelePiece.php');
 
 
 </body>
-<?php
-require('../CSS/Footer.php');
-?>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>
