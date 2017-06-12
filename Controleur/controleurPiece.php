@@ -1,3 +1,4 @@
+<div class="ControleurPiece">
 <?php
 
 require('../Modele/modelePiece.php');
@@ -80,6 +81,8 @@ else {
 
 
 }
+?>
+</div>
 
 
 

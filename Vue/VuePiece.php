@@ -14,14 +14,14 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 
-<?php
-require('../CSS/Header_Connecte.php');
-?>
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 
 <!-- ajouter tout les infos communes -->
 
 
-
+<div class="VuePiece">
 <article>
     <h3><?=$piece?></h3>
 
@@ -54,11 +54,11 @@ require('../CSS/Header_Connecte.php');
     $TABHistoTemperature=CreerTableauHistorique('thermometre',$tab);
     ?>
     <p> Historique du capteur de température:</p>
-    <table>
+    <table style="color:#ffffff">
         <tr>
-            <th>capteur</th>
-            <th>valeur</th>
-            <th>date</th>
+            <th>Capteur</th>
+            <th>Valeur</th>
+            <th>Date</th>
         </tr>
 
         <?php
@@ -84,32 +84,29 @@ require('../CSS/Header_Connecte.php');
 
     <br/>
     <br/>
-    <p>Ajouter un capteur:</p>
+    <p><strong><u>Ajouter un capteur:</u></strong></p>
     <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
-        <label for="nameAjout">nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="power">état du capteur (0/1)</label> : <input type="number" name="power" /><br/>
+        <label for="nameAjout">Nom</label> : <input type="text" name="nameAjout" /><br/>
+        <label for="power">État du capteur (0/1)</label> : <input type="number" name="power" /><br/>
         <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
 
+    <br/>
 
 
-    <br/>
-    <br/>
-    <br/>
-    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">retour aux choix de la pièce</a>
+    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">Retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
-    <p>retour au menu</p><!-- a changer en lien -->
+    <p>Retour au menu</p><!-- a changer en lien -->
 
 </article>
 
+    <br/><br/><br/><br/>
 
 
-<?php
-require('../CSS/Footer.php');
-?>
-
+</div>
 </body>
-
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>
