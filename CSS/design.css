@@ -115,6 +115,12 @@ input[type=submit]:hover{
     font-size: 15px;
     margin-top: 100px;
 }
+.ProfileClient{
+    color: #ffffff;
+    font: Arial;
+    font-size: 15px;
+    margin-top: 100px;
+}
 .header {
     background-color:#292c2f;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);

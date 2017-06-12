@@ -7,3 +7,4 @@ $GLOBALS['max'] = $nbetage[1]; // idem avec l'étage max
 
 
 require('../Vue/ChoixEtage.php'); // On fait appel à la vue de choix d'étage.
+

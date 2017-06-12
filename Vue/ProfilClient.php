@@ -20,7 +20,7 @@ if(!isset($_SESSION['connexion'])){
 $listeInfos=GetProfileClient($_GET['iduser']);
 ?>
 <!-- require un getteur des infos -->
-
+<div class="ProfileClient">
 <form action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
     <label for="prenom">Prénom :</label>
     <input type="text" name="prenom" value="<?=$listeInfos['name']?>"/>
@@ -55,20 +55,20 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 <form id="motDePasse" action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
 
-    <p>Changer votre mot de passe :</p>
+    <p><strong><u>Changer votre mot de passe :</u></strong></p>
 
     <label for="oldmdp">Mot de passe actuel :</label>
-    <input type="password" name="oldmdp"/>
+    <input type="password" placeholder="Mot de passe actuel" name="oldmdp"/>
     <br/>
     <br/>
 
     <label for="newmdp1">Nouveau mot de passe :</label>
-    <input type="password" name="newmdp1"/>
+    <input type="password" placeholder="Nouveau mot de passe" name="newmdp1"/>
     <br/>
     <br/>
 
     <label for="newmdp2">Confirmez votre mot de passe :</label>
-    <input type="password" name="newmdp2"/>
+    <input type="password" placeholder="Confirmer le mot de passe" name="newmdp2"/>
     <br/>
     <br/>
 
@@ -81,7 +81,9 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 
 <script type="text/javascript" src="../Else/changermdp.js"></script>
+</div>
 </body>
+<br/><br/><br/><br/><br/><br/>
 
 <footer><?php include '../CSS/Footer.php';?>
 </footer>

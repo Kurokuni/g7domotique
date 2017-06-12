@@ -2,7 +2,7 @@
 
 require('../Modele/modeleProfileClient.php');
 
-$IDUSER=$_GET['iduser'];
+$IDUSER=$_GET['IDUSER'];
 
 // setteurs des informations editables du client
 
