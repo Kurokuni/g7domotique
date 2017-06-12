@@ -33,7 +33,7 @@ foreach($listeMaison as $ligne){
 }
 ?>
 
-<a href="../Vue/UcNumero8ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a>
+<a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a>
 
 
 <?php
