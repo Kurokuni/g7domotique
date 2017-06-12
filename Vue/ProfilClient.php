@@ -12,9 +12,9 @@ if(!isset($_SESSION['connexion'])){
     <title>Profil Client</title>
 </head>
 <body>
-
-<?php require('../CSS/Header_Connecte.php');?>
-<br/>
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 
 <?php require('../Modele/modeleProfileClient.php');
 $listeInfos=GetProfileClient($_GET['iduser']);
@@ -79,8 +79,10 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 
 
-<?php require('../CSS/Footer.php');?>
 
 <script type="text/javascript" src="../Else/changermdp.js"></script>
 </body>
+
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

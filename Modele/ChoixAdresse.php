@@ -9,4 +9,13 @@ $adresse= $conn -> query('SELECT `street_num`, `street`, `city`,`zipcode`,`count
 $nbadresse = $adresse -> fetchAll();/* On recupere la donner de l'objet*/
 
 
+echo$adresse[1];
+
+//echo $nbadresse;
+for($i=0, $size=count($nbadresse); $i<$size; $i++){
+    echo "Trame $i: $nbadresse[$i]<br />";
+}
+
+
+
 

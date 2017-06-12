@@ -12,11 +12,12 @@ if(!isset($_SESSION['connexion'])){
     <link rel="stylesheet" href="../CSS/design.css" />
     <title>Acces Pièce</title>
 </head>
+
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 <body>
 
-<?php
-require ('../CSS/Header_Connecte.php');
-?>
 
 <!-- ajouter tout les infos communes -->
 <?php
@@ -57,9 +58,8 @@ require('../Modele/modelePiece.php');
 
 </article>
 
-<?php
-require('../CSS/Footer.php');
-?>
-</body>
 
+</body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

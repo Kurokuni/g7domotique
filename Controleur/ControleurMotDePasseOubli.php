@@ -1,17 +1,36 @@
 <?php
+if(!isset($_SESSION['connexion'])){
+    session_start();
+    $_SESSION['connexion']=1;
+}
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscription</title>
+    </head>
+<body>
+<header>
+<?php include '../CSS/Header_Deconnecte.php';?>
+</header>
+
+<div class="EnvoieMail">
+<?php
 require ('../Modele/ModeleMotDePasseOubli.php');
 $Mail=$_POST['e-mail'];
 
 $Mdp = MailDePasse($Mail);
-$Mail = 'jacques.burie@gmail.com';
+$Mail = $Mail;
 $Sujet = 'Récupération du mot de passe';
 $Message = 'Voici votre mot de passe Veuillez le noter quelque part.';
 $headers = "From: Sendmail Tests" . PHP_EOL;
 $headers = 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+
 if (!mail($Mail, $Sujet, $Message, $headers)) {
     echo 'mail non envoyé';
 }else {
-    echo 'mail envoyer ' . $Mail;
+    echo 'mail envoyé ' . $Mail;
 }
 //mail($Mail, $Sujet, $Message);
 function mail_utf8($to, $from_user, $from_email,
@@ -30,3 +49,9 @@ function mail_utf8($to, $from_user, $from_email,
 //    echo 'mail non envoyé';
 //}
 ?>
+</div>
+
+</body>
+    <footer><?php include '../CSS/Footer.php';?>
+    </footer>
+</html>
