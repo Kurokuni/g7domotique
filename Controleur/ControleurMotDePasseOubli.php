@@ -3,7 +3,7 @@ require ('../Modele/ModeleMotDePasseOubli.php');
 $Mail=$_POST['e-mail'];
 
 $Mdp = MailDePasse($Mail);
-$Mail = 'jacques.burie@gmail.com';
+$Mail = $Mail;
 $Sujet = 'Récupération du mot de passe';
 $Message = 'Voici votre mot de passe Veuillez le noter quelque part.';
 $headers = "From: Sendmail Tests" . PHP_EOL;
