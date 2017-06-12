@@ -16,7 +16,7 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php include '../CSS/Header_Connecte.php';?>
 </header>
-<body>
+<body class="AccesPiece">
 
 
 <!-- ajouter tout les infos communes -->
@@ -32,7 +32,7 @@ require('../Modele/modelePiece.php');
 
 
 <article>
-    <h3>Accès aux pièces <!--requete php nom de la piece --></h3>
+    <h3><strong><u>Accès aux pièces </u></strong><!--requete php nom de la piece --></h3>
     <!-- acces dynamique aux pieces -->
     <?php
     $ListePiece=ListePiece($IDHOME);
@@ -40,18 +40,19 @@ require('../Modele/modelePiece.php');
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></p>
+        <p>Pièce n°<?=$ListePiece[$var]?> : <strong><a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a></strong>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></p>
         <?php
         $var=$var+2;
     }
     ?>
-
-    <p>Ajouter une pièce:</p>
+<br>
+    <p><strong><u>Ajouter une pièce:</u></strong></p>
     <form action="../Controleur/controleurPiece.php" method="post">
-        <label for="nameAjout">nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="floor">étage</label> : <input type="number" name="floor" /><br/>
-        <label for="home">identifiant de la maison</label> : <input type="number" name="home" /><br/>
+        <label for="nameAjout">Nom</label> : <input type="text" name="nameAjout" /><br/>
+        <label for="floor">Étage</label> : <input type="number" name="floor" /><br/>
+        <label for="home">Identifiant de la maison</label> : <input type="number" name="home" /><br/>
         <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
+        <br>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
