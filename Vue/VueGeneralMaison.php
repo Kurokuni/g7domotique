@@ -12,6 +12,9 @@ if(!isset($_SESSION['connexion'])){
     <link rel="stylesheet" href="../design.css" />
     <title>Vue d'ensemble</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 <body>
 
 
@@ -28,5 +31,6 @@ echo($ligne['name']. ' : ' .$data.'<br><br>');
 
 
 </body>
-
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

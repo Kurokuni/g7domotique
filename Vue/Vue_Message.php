@@ -8,9 +8,13 @@ if(!isset($_SESSION['connexion'])){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/design.css" />
     <title>Message</title>
 </head>
-<body>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
+<body class="Message">
 
 <form action='../Controleur/Controleur_Message.php' method="post">
     <label><input type="text" name="Message" placeholder="Message"/></label>
@@ -22,4 +26,7 @@ affichermessage();
 
 
 </body>
+<footer>
+    <?php include '../CSS/Footer.php';?>
+</footer>
 </html>
