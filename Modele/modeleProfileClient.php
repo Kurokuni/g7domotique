@@ -53,6 +53,8 @@ function SetMailProfile($name,$idClient){
 
 //**************************** MOT DE PASSE *********************************
 
+
+
 function checkingOldPW($oldPW,$idclient){
     $test=false;
     require('../Else/connexionDB.php');

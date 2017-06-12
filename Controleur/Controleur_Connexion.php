@@ -31,6 +31,8 @@ $_SESSION["nom"] = $Nom;
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":
+                $Nom=$_POST['nom'];
+                $Mdp=$_POST['mdp'];
                 require ('../Vue/VueAdminConnecte.php');
                 break;
             default:

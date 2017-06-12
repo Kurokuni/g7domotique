@@ -16,9 +16,9 @@ if(isset($_POST['nameAjout']) && isset($_POST['floor']) && isset($_POST['home'])
 
 }
 
-elseif(isset($_POST['numberSuppr']) && isset($_POST['nameSuppr'])){
-    $ID=$_POST['numberSuppr'];
-    $name=$_POST['nameSuppr'];
+elseif(isset($_GET['numberSuppr']) && isset($_GET['nameSuppr'])){
+    $ID=$_GET['numberSuppr'];
+    $name=$_GET['nameSuppr'];
     SupprimerPiece($ID);
     $varEtat='supprimée de';
     require('../Vue/VuePieceCree.php');

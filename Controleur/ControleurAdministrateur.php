@@ -2,6 +2,17 @@
 
 require('../Modele/ModeleAdministrateur.php');
 
+if(isset($_POST['recherche']) && $_POST['typeDeRecherche']=="InfoUser"){
+    $recherche2=rechercheInfosUser($_POST['recherche']);
+    require('../Vue/VueAdminConnecte.php');
+}
+
+if(isset($_POST['recherche']) && $_POST['typeDeRecherche']=="InfoDomicile"){
+    $recherche1=rechercheAdresseUser($_POST['recherche']);
+    require('../Vue/VueAdminconnecte.php');
+}
+
+
 //modifie qui sommes nous
 if(isset($_GET['QuiSommesNous'])){
     $textQuiSommesNous=$_GET['QuiSommesNous'];
