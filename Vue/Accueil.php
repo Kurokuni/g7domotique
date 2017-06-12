@@ -32,17 +32,18 @@
                         <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
                             .
                         <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de passe oublié</a>
+                            <?php
+                            if (isset($erreur)){
+                                echo 'Nom de compte ou mot de passe incorrect!';
+                            }
+                            ?>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
     </div>
-    <?php
-    if (isset($erreur)){
-        echo 'Nom de compte ou mot de passe incorrect!';
-    }
-    ?>
+
         <div class="QuiSommeNous">
         <p id="QuiSommesNous" align="center"> <strong> Qui sommes nous ? </strong></p>
         <p>Domisep est une entreprise sp&eacute;cialis&eacute;e dans la t&eacute;l&eacute;surveillance d'immeubles, gr&acirc;ce &agrave; la pose de syst&egrave;mes d'alarme sans fil adapt&eacute;s aux besoins des particuliers et une centrale d'alarme op&eacute;rationnelle 24h/24. Domisep g&egrave;re un parc de plusieurs milliers d'habitations dans plus d'une dizaine de pays en Europe.</p>
