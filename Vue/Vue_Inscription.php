@@ -12,20 +12,23 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <header>
-
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
+
+<div class="Inscription">
 <form action='../Controleur/Controleur_Inscription.php' method="post">
-    <label>Nom: <input type="text" name="nom"/></label><br/>
-    <label>Prénom: <input type="text" name="prenom"/></label><br/>
-    <label>Adresse e-mail: <input type="text" name="email"/></label><br/>
-    <label>Numéro de téléphone: <input type="number" name="phone"/></label><br/>
-    <label>Mot de passe: <input type="password" name="mdp"/></label><br/>
-    <label>Confirmation du mot de passe: <input type="password" name="mdp2"/></label><br/>
-    <label>Pseudo: <input type="text" name="pseudo"/></label><br/>
-    <label>Date de naissance: <input type="date" name="date"/></label><br/>
+    <label>Nom: <input type="text" name="nom" placeholder="Nom"/></label>
+    <label>Prénom: <input type="text" name="prenom" placeholder="Prénom"/></label><br/>
+    <label>Adresse e-mail: <input type="text" name="email" placeholder="Email"/></label><br/>
+    <label>Numéro de téléphone: <input type="number" name="phone" placeholder="Numéro de téléphone"/></label><br/>
+    <label>Mot de passe: <input type="password" name="mdp" placeholder="Mot de passe"/></label><br/>
+    <label>Confirmation du mot de passe: <input type="password" name="mdp2" placeholder="Confirmation du mot de passe"/></label><br/>
+    <label>Pseudo: <input type="text" name="pseudo" placeholder="Pseudo"/></label><br/>
+    <label>Date de naissance: <input type="date" name="date" placeholder="JJ/MM/YY"/></label><br/>
     <input type="checkbox" name="cond" value="condit"> <a href="../Vue/ConditionDUtilisation.php">Condition générale d'utilisation</a> <br>
     <input type="submit" value="Inscription"/>
 </form>
+</div>
 <?php
 if (isset($erreur2)){
     echo "Veuillez accepter les condition générale d'utilisation";
@@ -35,8 +38,7 @@ echo 'Mot de passe different';
 }
 ?>
 
-<?php
-require('../CSS/Footer.php');
-?>
 </body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

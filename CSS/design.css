@@ -13,27 +13,25 @@ image{
 }
 .loginForm {
     position: absolute;
-    top: 200px;
+    top: 80px;
     left: 0;
     width: 98%;
 }
 .loginForm {
     color: white;
     font: bold 18px/20px Arial, Sans-Serif;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     padding: 10px;
 }
 .Inscription {
     position: absolute;
-    top: 350px;
+    top: 94px;
     left: 0;
-    width: 98%;
 }
 .Inscription {
     color: white;
-    font: 18px/20px Arial, Sans-Serif;
-    letter-spacing: 1px;
-    padding: 10px;
+    font: 15px/20px Arial, Sans-Serif;
+    padding: 5px;
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -45,24 +43,34 @@ input[type=text], input[type=password] {
 }
 
 input[type=submit] {
-    padding:8px 10px;
+    padding:4px 8px;
     background: #D3D3D3;
     border:0 none;
     cursor:pointer;
-    -webkit-border-radius: 10px;
-    border-radius: 12px;
+    -webkit-border-radius: 8px;
+    border-radius: 10px;
 }
 input[type=submit]:hover{
     opacity: 0.8;
 }
 .Mdp{
     padding: 5px;
+    font-size:15px;
+    font-family: Arial;
+}
+.MdpOublie{
+    padding: 5px;
+    margin-top: 100px;
+    font-size:15px;
+    font-family: Arial;
+    color:#ffffff;
 }
 
 .QuiSommeNous{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
+    margin-top: 350px;
 }
 
 .header {
@@ -233,9 +241,6 @@ input[type=submit]:hover{
     display: inline-block;
     font-size: 15px;
     color: #ffffff;
-    margin: 0 0 10px;
-    margin-left: 3px;
-    padding:0;
 }
 
 @media (max-width: 100px) {
@@ -280,7 +285,13 @@ input[type=submit]:hover{
         line-height: 1.8;
     }
 }
+.PageContact{
+    display: block;
 
+    color: #ffffff;
+    font: Arial;
+    font-size: 15px;
+}
 
 a {
     outline: none;
