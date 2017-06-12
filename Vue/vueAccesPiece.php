@@ -16,7 +16,7 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php include '../CSS/Header_Connecte.php';?>
 </header>
-<body>
+<body class="AccesPiece">
 
 
 <!-- ajouter tout les infos communes -->
@@ -32,7 +32,7 @@ require('../Modele/modelePiece.php');
 
 
 <article>
-    <h3>Accès aux pièces <!--requete php nom de la piece --></h3>
+    <h3><strong><u>Accès aux pièces <!--requete php nom de la piece --></u></strong></h3>
     <!-- acces dynamique aux pieces -->
     <?php
     $ListePiece=ListePiece($IDHOME);
@@ -46,20 +46,20 @@ require('../Modele/modelePiece.php');
     }
     ?>
 
-    <p>Ajouter une pièce:</p>
+    <p><strong><u>Ajouter une pièce:</u></strong></p>
     <form action="../Controleur/controleurPiece.php" method="post">
-        <label for="nameAjout">nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="floor">étage</label> : <input type="number" name="floor" /><br/>
-        <label for="home">identifiant de la maison</label> : <input type="number" name="home" /><br/>
+        <label for="nameAjout">Nom</label> : <input type="text" name="nameAjout" /><br/>
+        <label for="floor">Étage</label> : <input type="number" name="floor" /><br/>
+        <label for="home">Identifiant de la maison</label> : <input type="number" name="home" /><br/>
         <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
 
-    <p>Supprimer une pièce:</p>
+    <p><strong><u>Supprimer une pièce:</u></strong></p>
     <form action="../Controleur/controleurPiece.php" method="post">
-        <label for="nameSuppr">nom de la pièce a supprimer</label> : <input type="text" name="nameSuppr"  /><br/>
-        <label for="numberSuppr">numéro de la pièce à supprimer</label> : <input type="number" name="numberSuppr" /><br/>
+        <label for="nameSuppr">Nom de la pièce a supprimer</label> : <input type="text" name="nameSuppr"  /><br/>
+        <label for="numberSuppr">Numéro de la pièce à supprimer</label> : <input type="number" name="numberSuppr" /><br/>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
