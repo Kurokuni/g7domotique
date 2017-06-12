@@ -2,7 +2,7 @@
 $ServerName="localhost";
 $UserName="root";
 $Password="";
-$DBName="g7database.sql";
+$DBName="g7database"; // ajouter un .sql si necessaire
 
 try{
     $conn = new PDO("mysql:host=$ServerName;dbname=$DBName", $UserName,$Password);

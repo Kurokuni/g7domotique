@@ -8,7 +8,7 @@ if(!isset($_SESSION['connexion'])){
 <html lang="fr">
 <head>
 
-    <link href="../design.css" rel="stylesheet"/>
+    <link href="../CSS/design.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <title>CONTACT</title>
 

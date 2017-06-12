@@ -9,7 +9,7 @@ if(!isset($_SESSION['connexion'])){
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../design.css" />
+    <link rel="stylesheet" href="../CSS/design.css" />
     <title>Acces Pièce</title>
 </head>
 <body>
@@ -39,7 +39,7 @@ require('../Modele/modelePiece.php');
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a></p>
+        <p>Pièce n°<?=$ListePiece[$var]?> : <a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></p>
         <?php
         $var=$var+2;
     }
@@ -54,16 +54,6 @@ require('../Modele/modelePiece.php');
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
-
-    <p>Supprimer une pièce:</p>
-    <form action="../Controleur/controleurPiece.php" method="post">
-        <label for="nameSuppr">nom de la pièce a supprimer</label> : <input type="text" name="nameSuppr"  /><br/>
-        <label for="numberSuppr">numéro de la pièce à supprimer</label> : <input type="number" name="numberSuppr" /><br/>
-        <input type="submit" value="Envoyer" />
-    </form>
-    <br/>
-    <!-- peu être mettre une photo de la piece/ type de piece -->
-    <p><a href="Accueil.php">retour au menu</a></p><!-- a changer en lien -->
 
 </article>
 
