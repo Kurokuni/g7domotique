@@ -24,7 +24,7 @@ if(!isset($_SESSION['connexion'])){
     <label>Mot de passe: <input type="password" name="mdp" placeholder="Mot de passe"/></label><br/>
     <label>Confirmation du mot de passe: <input type="password" name="mdp2" placeholder="Confirmation du mot de passe"/></label><br/>
     <label>Pseudo: <input type="text" name="pseudo" placeholder="Pseudo"/></label><br/>
-    <label>Date de naissance: <input type="date" name="date" placeholder="JJ/MM/YY"/></label><br/>
+    <label>Date de naissance: <input type="date" name="date" placeholder="JJ/MM/YYYY"/></label><br/>
     <input type="checkbox" name="cond" value="condit"> <a href="../Vue/ConditionDUtilisation.php">Condition générale d'utilisation</a> <br>
     <input type="submit" value="Inscription"/>
 </form>

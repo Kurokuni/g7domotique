@@ -8,9 +8,9 @@ try{
     $conn = new PDO("mysql:host=$ServerName;dbname=$DBName", $UserName,$Password);
     // set error if connexion fails
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo"Connexion successfull";
+    //echo"Connexion successful";
 }
 catch(PDOExeption $e)
 {
-    echo"connexion failed" . $e->getMessage();
+    //echo"connexion failed" . $e->getMessage();
 }
