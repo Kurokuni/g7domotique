@@ -8,11 +8,13 @@ if(!isset($_SESSION['connexion'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../design.css" />
-    <title>modifier des paramètres</title>
+    <link rel="stylesheet" href="../CSS/design.css" />
+    <title>Modifier des paramètres</title>
 </head>
-<body>
-<?php require('../CSS/Header_Connecte.php');?>
+<header>
+    <?php require('../CSS/Header_Connecte.php');?>
+</header>
+<body class="ConditionUtilisation">
 <?php require('../Modele/ModeleAdministrateur.php'); ?>
 
 <form action="../Controleur/ControleurAdministrateur.php" method="get">
@@ -48,8 +50,10 @@ if(!isset($_SESSION['connexion'])){
 
 
 
-<?php
-require('../CSS/Footer.php');
-?>
+
 </body>
+
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 </html>

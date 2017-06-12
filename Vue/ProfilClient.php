@@ -22,27 +22,27 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 <!-- require un getteur des infos -->
 
 <form action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
-    <label for="prenom">prénom :</label>
+    <label for="prenom">Prénom :</label>
     <input type="text" name="prenom" value="<?=$listeInfos['name']?>"/>
     <br/>
     <br/>
 
-    <label for="nom">nom :</label>
+    <label for="nom">Nom :</label>
     <input type="text" name="nom" value="<?=$listeInfos['lastname']?>"/>
     <br/>
     <br/>
 
-    <label for="pseudo">pseudo :</label>
+    <label for="pseudo">Pseudo :</label>
     <input type="text" name="pseudo" value="<?=$listeInfos['pseudo']?>"/>
     <br/>
     <br/>
 
-    <label for="telephoneuser">numero de téléphone :</label>
+    <label for="telephoneuser">Numero de téléphone :</label>
     <input type="text" name="telephoneuser" value="<?=$listeInfos['phone_num']?>"/>
     <br/>
     <br/>
 
-    <label for="mailuser">adresse mail :</label>
+    <label for="mailuser">Adresse mail :</label>
     <input type="text" name="mailuser" value="<?=$listeInfos['email']?>"/>
     <br/>
     <br/>
@@ -55,19 +55,19 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 <form id="motDePasse" action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
 
-    <p>changer votre mot de passe :</p>
+    <p>Changer votre mot de passe :</p>
 
-    <label for="oldmdp">mot de passe actuel :</label>
+    <label for="oldmdp">Mot de passe actuel :</label>
     <input type="password" name="oldmdp"/>
     <br/>
     <br/>
 
-    <label for="newmdp1">nouveau mot de passe :</label>
+    <label for="newmdp1">Nouveau mot de passe :</label>
     <input type="password" name="newmdp1"/>
     <br/>
     <br/>
 
-    <label for="newmdp2">confirmez votre mot de passe :</label>
+    <label for="newmdp2">Confirmez votre mot de passe :</label>
     <input type="password" name="newmdp2"/>
     <br/>
     <br/>
