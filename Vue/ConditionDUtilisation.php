@@ -21,7 +21,7 @@ if(!isset($_SESSION['connexion'])){
 
     <label for="QuiSommesNous">Modifier le texte de présentation de l'entreprise</label> :<br/>
 <?php $vue=getQuiSommesNous();?>
-    <textarea name="QuiSommesNous" rows="10" cols=50"><?php echo($vue);?></textarea>
+    <textarea name="QuiSommesNous" rows="10" cols=200"><?php echo($vue);?></textarea>
 
     <br/>
 
@@ -48,7 +48,7 @@ if(!isset($_SESSION['connexion'])){
 
 </form>
 
-
+<br/><br/><br/><br/>
 
 
 </body>

@@ -19,30 +19,33 @@ if(!isset($_SESSION['connexion'])){
 <?php require('../Modele/modeleProfileClient.php');
 $listeInfos=GetProfileClient($_GET['iduser']);
 ?>
-<!-- require un getteur des infos -->
-<div class="ProfileClient">
+<br/><br/><br/><br/>
+
+<h2>Votre profile:</h2>
+<br/><br/>
+
 <form action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
-    <label for="prenom">Prénom :</label>
+    <label for="prenom">prénom :</label>
     <input type="text" name="prenom" value="<?=$listeInfos['name']?>"/>
     <br/>
     <br/>
 
-    <label for="nom">Nom :</label>
+    <label for="nom">nom :</label>
     <input type="text" name="nom" value="<?=$listeInfos['lastname']?>"/>
     <br/>
     <br/>
 
-    <label for="pseudo">Pseudo :</label>
+    <label for="pseudo">pseudo :</label>
     <input type="text" name="pseudo" value="<?=$listeInfos['pseudo']?>"/>
     <br/>
     <br/>
 
-    <label for="telephoneuser">Numero de téléphone :</label>
+    <label for="telephoneuser">numero de téléphone :</label>
     <input type="text" name="telephoneuser" value="<?=$listeInfos['phone_num']?>"/>
     <br/>
     <br/>
 
-    <label for="mailuser">Adresse mail :</label>
+    <label for="mailuser">adresse mail :</label>
     <input type="text" name="mailuser" value="<?=$listeInfos['email']?>"/>
     <br/>
     <br/>
@@ -55,35 +58,33 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 <form id="motDePasse" action="../Controleur/ControleurProfileClient.php?iduser=<?=$_GET['iduser']?>" method="post">
 
-    <p><strong><u>Changer votre mot de passe :</u></strong></p>
+    <p>changer votre mot de passe :</p>
 
-    <label for="oldmdp">Mot de passe actuel :</label>
-    <input type="password" placeholder="Mot de passe actuel" name="oldmdp"/>
-    <br/>
-    <br/>
-
-    <label for="newmdp1">Nouveau mot de passe :</label>
-    <input type="password" placeholder="Nouveau mot de passe" name="newmdp1"/>
+    <label for="oldmdp">mot de passe actuel :</label>
+    <input type="password" name="oldmdp"/>
     <br/>
     <br/>
 
-    <label for="newmdp2">Confirmez votre mot de passe :</label>
-    <input type="password" placeholder="Confirmer le mot de passe" name="newmdp2"/>
+    <label for="newmdp1">nouveau mot de passe :</label>
+    <input type="password" name="newmdp1"/>
+    <br/>
+    <br/>
+
+    <label for="newmdp2">confirmez votre mot de passe :</label>
+    <input type="password" name="newmdp2"/>
     <br/>
     <br/>
 
     <input type="submit" value="Envoyer"/>
 
 </form>
-
+<br/><br/><br/><br/>
 
 
 
 
 <script type="text/javascript" src="../Else/changermdp.js"></script>
-</div>
 </body>
-<br/><br/><br/><br/><br/><br/>
 
 <footer><?php include '../CSS/Footer.php';?>
 </footer>

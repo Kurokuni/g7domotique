@@ -11,9 +11,7 @@ if(!isset($_SESSION['connexion'])){
         <title>Inscription</title>
     </head>
 <body>
-<header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
-</header>
+
 <div class="Connexion">
 <?php
 require ('../Modele/Modele_Connexion.php');
@@ -48,6 +46,5 @@ $_SESSION["nom"] = $Nom;
 ?>
 </div>
 </body>
-<footer><?php include '../CSS/Footer.php';?>
-</footer>
+
 </html>
