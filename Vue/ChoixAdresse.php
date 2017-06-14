@@ -10,6 +10,9 @@ if(!isset($_SESSION['connexion'])){
     <meta charset="UTF-8">
     <title>ChoixAdresse</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
 
 <?php
@@ -20,8 +23,8 @@ foreach ($nbadresse as $element)
 }
 
 ?>
-<?php
-require('../CSS/Footer.php');
-?>
+
 </body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

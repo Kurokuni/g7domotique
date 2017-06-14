@@ -14,7 +14,7 @@ if(!isset($_SESSION['connexion'])){
 
 <body>
 <?php
-require ('../CSS/Header_Connecte.php');
+require ('../CSS/Header_Deconnecte.php');
 ?>
 
 <br/><br/>

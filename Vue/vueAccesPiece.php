@@ -14,7 +14,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 <body class="AccesPiece">
 

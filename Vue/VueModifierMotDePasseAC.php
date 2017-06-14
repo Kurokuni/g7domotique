@@ -10,10 +10,10 @@ if(!isset($_SESSION['connexion'])){
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
-<?php
-require ('../Header.php');
-?>
 
 
 
@@ -22,8 +22,9 @@ require ('../Header.php');
 
 
 
+
+</body>
 <?php
 require('../CSS/Footer.php');
 ?>
-</body>
 </html>

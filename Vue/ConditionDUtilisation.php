@@ -12,7 +12,7 @@ if(!isset($_SESSION['connexion'])){
     <title>Modifier des paramètres</title>
 </head>
 <header>
-    <?php require('../CSS/Header_Connecte.php');?>
+    <?php require('../CSS/Header_Deconnecte.php');?>
 </header>
 <body class="ConditionUtilisation">
 <?php require('../Modele/ModeleAdministrateur.php'); ?>
