@@ -25,6 +25,7 @@ echo "<div align=center class=\"Container_VueEnsemble\">" ,($adress['street_num'
 require('../Controleur/controleurVueEnsemble.php')
 ?>
 
+<br>
 
 <p>Accédez au détails de vos propriétés ici :</p>
 
