@@ -12,15 +12,18 @@ if(!isset($_SESSION['connexion'])){
     <link rel="stylesheet" href="" />
     <title>Pièce ajoutée</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
 
 <p>La pièce <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
 
 
 <a href="../Vue/vueAccesPiece.php">Retour a la liste des pièces</a>
+
+</body>
 <?php
 require('../CSS/Footer.php');
 ?>
-</body>
-
 </html>

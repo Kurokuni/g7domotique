@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 
 <?php require('../Modele/modeleProfileClient.php');

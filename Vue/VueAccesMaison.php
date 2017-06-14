@@ -15,15 +15,17 @@ if(!isset($_SESSION['connexion'])){
 <body>
 
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
+
 <?php
 
-echo($adress['street_num'].' '.$adress['street'].' '.$adress['city']);
+echo "<div align=center class=\"Container_VueEnsemble\">" ,($adress['street_num'].' '.$adress['street'].' '.$adress['city']);
 
 require('../Controleur/controleurVueEnsemble.php')
 ?>
 
+<br>
 
 <p>Accédez au détails de vos propriétés ici :</p>
 
@@ -33,7 +35,7 @@ foreach($listeMaison as $ligne){
 }
 ?>
 
-<a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a>
+<p><a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a></p>
 
 
 <?php
