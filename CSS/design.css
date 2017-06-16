@@ -63,11 +63,18 @@ input[type=submit]:hover{
     font-family: Arial;
 }
 .MdpOublie{
-    padding: 5px;
-    margin-top: 100px;
     font-size:15px;
     font-family: Arial;
     color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+    padding: 20px 20px 20px 20px;
 }
 
 .QuiSommeNous{
