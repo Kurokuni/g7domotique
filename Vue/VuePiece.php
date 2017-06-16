@@ -22,6 +22,7 @@ if(!isset($_SESSION['connexion'])){
 
 
 <div class="VuePiece">
+
 <article>
     <h3><?=$piece?></h3>
 
@@ -53,7 +54,7 @@ if(!isset($_SESSION['connexion'])){
     <?php
     $TABHistoTemperature=CreerTableauHistorique('thermometre',$tab);
     ?>
-    <p> Historique du capteur de température:</p>
+    <p> Historique du capteur de température :</p>
     <table style="color:#ffffff">
         <tr>
             <th>Capteur</th>
@@ -84,16 +85,15 @@ if(!isset($_SESSION['connexion'])){
 
     <br/>
     <br/>
-    <p><strong><u>Ajouter un capteur:</u></strong></p>
+    <p><strong><u>Ajouter un capteur :</u></strong></p>
     <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
-        <label for="nameAjout">Nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="power">État du capteur (0/1)</label> : <input type="number" name="power" /><br/>
-        <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
+        <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
+        <label for="power">État du capteur (0/1)</label> : <input placeholder="L'état du capteur" type="number" name="power" /><br/>
+        <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
 
-    <br/>
 
 
     <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">Retour aux choix de la pièce</a>
@@ -101,11 +101,9 @@ if(!isset($_SESSION['connexion'])){
     <p>Retour au menu</p><!-- a changer en lien -->
 
 </article>
-
-    <br/><br/><br/><br/>
-
-
 </div>
+    <br/><br/><br/><br>
+
 </body>
 <footer><?php include '../CSS/Footer.php';?>
 </footer>

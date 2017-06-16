@@ -20,7 +20,7 @@ if(!isset($_SESSION['connexion'])){
     <div class ="loginForm">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <p class="panel-title"> Connection</p>
+                <p class="panel-title"> Connexion</p>
             </div>
             <div class="panel-body">
                 <form action='http://localhost/g7domotique/Controleur/Controleur_Connexion.php' method='post' accept-charset="UTF-8" role="form">
@@ -31,7 +31,7 @@ if(!isset($_SESSION['connexion'])){
                         <div class="form-group">
                             <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="">
                         </div>
-                        <input type="submit" value="Connection">
+                        <input type="submit" value="Connexion">
 
                         <?php
                         if (isset($erreur)){

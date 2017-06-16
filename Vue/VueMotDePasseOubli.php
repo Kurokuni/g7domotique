@@ -23,7 +23,7 @@ require ('../CSS/Header_Deconnecte.php');
     <fieldset>
         <legend>Veuiller entrer le e-mail de votre compte :</legend>
         E-mail: <input placeholder="Adresse email" type="email" name='e-mail'><br>
-        <input type='submit'>
+        <input type='submit' value="Soumettre">
     </fieldset>
 </form>
 </div>

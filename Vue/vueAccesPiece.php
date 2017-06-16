@@ -16,13 +16,14 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
-<div class="AccesPiece">
 
-<div class="Container_AccesPiece"
+
+<div class="VueAccesPiece">
 <!-- ajouter tout les infos communes -->
 <?php
 require('../Modele/modelePiece.php');
 ?>
+
 
 <h2><?=$_GET['Home']?></h2>
 
@@ -30,7 +31,7 @@ require('../Modele/modelePiece.php');
     $IDHOME=$_GET['id'];
 ?>
 
-<div class="Container_AccesPiece_2"{
+<div class="VueAccesPiece_2"{
 <article>
     <h3><strong><u>Accès aux pièces </u></strong><!--requete php nom de la piece --></h3>
     <!-- acces dynamique aux pieces -->
@@ -46,7 +47,7 @@ require('../Modele/modelePiece.php');
     }
     ?>
 <br>
-    <p><strong><u>Ajouter une pièce:</u></strong></p>
+    <p><strong><u>Ajouter une pièce :</u></strong></p>
     <form action="../Controleur/controleurPiece.php" method="post">
         <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
         <label for="floor">Étage</label> : <input placeholder="L'étage" type="number" name="floor" /><br/>
@@ -58,7 +59,6 @@ require('../Modele/modelePiece.php');
     <br/>
 
 </article>
-</div>
 </div>
 </body>
 <footer><?php include '../CSS/Footer.php';?>

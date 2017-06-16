@@ -17,7 +17,7 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
-
+<div style="margin-top: 15%" class="VueAccesMaison">
 <?php
 
 echo "<div align=center class=\"Container_VueEnsemble\">" ,($adress['street_num'].' '.$adress['street'].' '.$adress['city']);
@@ -27,7 +27,7 @@ require('../Controleur/controleurVueEnsemble.php')
 
 <br>
 
-<p>Accédez au détails de vos propriétés ici :</p>
+<p>Accédez au détails de vos propriétés :</p>
 
 <?php
 foreach($listeMaison as $ligne){
@@ -41,7 +41,7 @@ foreach($listeMaison as $ligne){
 <?php
 require('../CSS/Footer.php');
 ?>
-
+</div>
 </body>
 
 <footer><?php include '../CSS/Footer.php';?>
