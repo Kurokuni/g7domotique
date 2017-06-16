@@ -18,7 +18,7 @@ if(!isset($_SESSION['connexion'])){
 <?php
 require ('../CSS/Header_Deconnecte.php');
 ?>
-<div class="MdpOublie">
+<div style="margin-top: 10%" class="MdpOublie">
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
         <legend>Veuiller entrer le e-mail de votre compte :</legend>
