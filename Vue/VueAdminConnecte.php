@@ -58,7 +58,7 @@ if(isset($recherche2)){
 <br/><br/>
 
 
-<a href="../Vue/ConditionDUtilisation.php">Modifier les textes editables.</a>
+<a href="../Vue/TextsModifiables.php">Modifier les textes editables.</a>
 
 
 
