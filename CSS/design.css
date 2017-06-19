@@ -303,6 +303,24 @@ input[type=submit]:hover{
     appearance: none;
 }
 
+.barre_navigation {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.case1{
+    list-style-type: none;
+    float:right;
+    width:10%;
+}
+
+.case1 a {
+    display:block;
+    color:white;
+}
+
 .footer{
     background-color: rgba(131, 174, 193,0.4);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

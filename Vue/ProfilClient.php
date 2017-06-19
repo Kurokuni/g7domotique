@@ -82,7 +82,7 @@ $listeInfos=GetProfileClient($_GET['iduser']);
 
 <a href="../Controleur/controleurMaison.php?pseudo=<?=$listeInfos['pseudo']?>">retour</a>
 
-<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
