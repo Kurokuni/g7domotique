@@ -8,7 +8,7 @@
     <footer class="footer">
 
         <div class="footer-right">
-            <a href="#">Site de l'entreprise Domisep</a>
+            <a>Site proposé par la société Domisep</a>
         </div>
 
         <div class="footer-left">
