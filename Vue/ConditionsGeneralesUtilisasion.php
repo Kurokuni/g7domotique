@@ -17,7 +17,6 @@ if(!isset($_SESSION['connexion'])){
 <br>
 <br>
 <br>
-<br>
 <div class="Conditions">
     <?php require('../Controleur/getteurAdmin.php');
     echo($textConditions)?>
