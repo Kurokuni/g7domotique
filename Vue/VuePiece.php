@@ -15,33 +15,27 @@ if(!isset($_SESSION['connexion'])){
 <body>
 
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 
 <!-- ajouter tout les infos communes -->
 
 
 <div class="VuePiece">
+
 <article>
     <h3><?=$piece?></h3>
 
-    <?php $IDHOME=$_GET['idhome'];?>
+    <?php $IDHOME=$_GET['idhome'];
+          $pseudo=$_GET['pseudo'];?>
 
     <?php
 
-    /*$TabCaptPiece=CaptInRoom($id);
-    $cursor=0;
-    while($cursor<count($TabCaptPiece)){
-        ?>
-        <p><?=$TabCaptPiece[$cursor]?> : <?=$TabCaptPiece[$cursor+1]?>  <a href="../Controleur/controleurCapteur.php?capteur=<?=$TabCaptPiece[$cursor]?>&IDPiece=<?=$id?>&piece=<?=$piece?>">détails du capteur</a> </p>
-    <?php
-        $cursor=$cursor+2;
-    }*/
 
 
     $x=0;
     foreach($tabcapteurs as $ligne) {
-        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>">supprimer</a><?php
+        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>&pseudo=<?=$pseudo?>">supprimer</a><?php
         echo( ' ' .'<br>');
         $x++;
     }
@@ -53,7 +47,7 @@ if(!isset($_SESSION['connexion'])){
     <?php
     $TABHistoTemperature=CreerTableauHistorique('thermometre',$tab);
     ?>
-    <p> Historique du capteur de température:</p>
+    <p> Historique du capteur de température :</p>
     <table style="color:#ffffff">
         <tr>
             <th>Capteur</th>
@@ -84,28 +78,25 @@ if(!isset($_SESSION['connexion'])){
 
     <br/>
     <br/>
-    <p><strong><u>Ajouter un capteur:</u></strong></p>
-    <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
-        <label for="nameAjout">Nom</label> : <input type="text" name="nameAjout" /><br/>
-        <label for="power">État du capteur (0/1)</label> : <input type="number" name="power" /><br/>
-        <label for="HAG">Hag associé</label> : <input type="number" name="HAG" /><br/>
+    <p><strong><u>Ajouter un capteur :</u></strong></p>
+    <form action="../Controleur/controleurCapteur.php?id=<?=$id?>&pseudo=<?=$pseudo?>" method="post">
+        <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
+        <label for="power">État du capteur (0/1)</label> : <input placeholder="L'état du capteur" type="number" name="power" /><br/>
+        <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
         <input type="submit" value="Envoyer" />
     </form>
     <br/>
 
-    <br/>
 
 
-    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">Retour aux choix de la pièce</a>
+    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>&pseudo=<?=$pseudo?>">Retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
     <p>Retour au menu</p><!-- a changer en lien -->
 
 </article>
-
-    <br/><br/><br/><br/>
-
-
 </div>
+    <br/><br/><br/><br>
+
 </body>
 <footer><?php include '../CSS/Footer.php';?>
 </footer>

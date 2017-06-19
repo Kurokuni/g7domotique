@@ -12,11 +12,11 @@ if(!isset($_SESSION['connexion'])){
     <link rel="stylesheet" href="../design.css" />
     <title>Acces Pièce</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
 
-<?php
-require ('../Header.php');
-?>
 
 <h2>bienvenue <?=$_SESSION["nom"]?></h2>
 
@@ -30,10 +30,8 @@ require ('../Header.php');
 <br/><br/><br/><br/>
 
 
-<?php
-require('../CSS/Footer.php');
-?>
 
 </body>
-
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

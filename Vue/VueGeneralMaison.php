@@ -13,18 +13,19 @@ if(!isset($_SESSION['connexion'])){
     <title>Vue d'ensemble</title>
 </head>
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
+
 <body>
 
 
 <!-- adresse de la maison -->
 
-<br/> <!--saut de ligne pour aerer la présentation-->
+<br/><!--saut de ligne pour aerer la présentation-->
 <?php
 foreach ($tabCapteurs as $ligne){
 $data=selectAverage($ligne['name'],$IDAdresse1);
-echo($ligne['name']. ' : ' .$data.'<br><br>');
+echo ($ligne['name']. ' : ' .$data.'<br><br>');
 }
 
 ?>

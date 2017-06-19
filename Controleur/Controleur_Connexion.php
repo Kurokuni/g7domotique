@@ -11,9 +11,7 @@ if(!isset($_SESSION['connexion'])){
         <title>Inscription</title>
     </head>
 <body>
-<header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
-</header>
+
 <div class="Connexion">
 <?php
 require ('../Modele/Modele_Connexion.php');
@@ -27,7 +25,6 @@ $_SESSION["nom"] = $Nom;
             case "1":
                 $Nom=$_POST['nom'];
                 $Mdp=$_POST['mdp'];
-                $adress=getHomePrincipale($Nom);
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":
@@ -48,6 +45,5 @@ $_SESSION["nom"] = $Nom;
 ?>
 </div>
 </body>
-<footer><?php include '../CSS/Footer.php';?>
-</footer>
+
 </html>

@@ -1,7 +1,7 @@
 body {
     background-image: url("../Images/Accueil.png");
     background-size: cover;
-    color: black;
+    color: white;
     font-family: 'Arial';
     margin-top: 5%;
 }
@@ -23,16 +23,19 @@ image{
     letter-spacing: 0px;
     padding: 10px;
 }
-.Inscription {
-    position: absolute;
-    top: 94px;
-    left: 0;
-}
-.Inscription {
+
+.VueInscription{
     color: white;
-    font: 15px/20px Arial, Sans-Serif;
-    padding: 5px;
-    position: center;
+    font: 15px Arial, Sans-Serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+    padding: 20px 20px 20px 20px;
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -60,11 +63,18 @@ input[type=submit]:hover{
     font-family: Arial;
 }
 .MdpOublie{
-    padding: 5px;
-    margin-top: 100px;
     font-size:15px;
     font-family: Arial;
     color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+    padding: 20px 20px 20px 20px;
 }
 
 .QuiSommeNous{
@@ -85,12 +95,7 @@ input[type=submit]:hover{
     font-size: 15px;
     margin-top: 100px;
 }
-.AccesPiece{
-    color: #ffffff;
-    font: Arial;
-    font-size: 15px;
-    margin-top: 100px;
-}
+
 .ControleurPiece{
     color: #ffffff;
     font: Arial;
@@ -102,6 +107,10 @@ input[type=submit]:hover{
     font: Arial;
     font-size: 15px;
     margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
 }
 .Message{
     color: #ffffff;
@@ -121,8 +130,65 @@ input[type=submit]:hover{
     font-size: 15px;
     margin-top: 100px;
 }
+
+.VueAccesMaison{
+    color: #ffffff;
+    font: Arial;
+    font-size: 15px;
+
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    width:50%;
+    margin:auto;
+    padding-top: 10px;
+}
+.VueAccesPiece{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10%;
+    color: #ffffff;
+    font: Arial;
+    font-size: 15px;
+}
+.VueAccesPiece_2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    padding:5px;
+    width: 70%;
+    margin:auto;
+    padding: 0px 20px 0px 20px;
+}
+.VuePiece_Box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.VuePiece{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 70%;
+    margin:auto;
+    padding: 0px 20px 0px 20px;
+    height:30%;
+    height: auto;
+}
+
 .header {
-    background-color:#292c2f;
+    background-color: rgba(131, 174, 193,0.2);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
     padding: 10px;
     height: 10%;
@@ -238,7 +304,7 @@ input[type=submit]:hover{
 }
 
 .footer{
-    background-color: #292c2f;
+    background-color: rgba(131, 174, 193,0.4);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -279,7 +345,8 @@ input[type=submit]:hover{
 .footer .footer-right{
     font-size: 10px;
     margin:0;
-    color:#8f9296
+    color:#8f9296;
+    text-align: right;
 }
 
 .footer .footer-right a{
@@ -338,7 +405,14 @@ input[type=submit]:hover{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
+    background-color: rgba(220,220,220,0.4);
+    border-radius: 20px;
+    padding-top: 5px;
+    width:40%;
+    margin:auto;
 }
+
+
 
 a {
     outline: none;

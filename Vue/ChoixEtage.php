@@ -10,6 +10,9 @@ if(!isset($_SESSION['connexion'])){
     <meta charset="UTF-8">
     <title>ChoixEtage</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Deconnecte.php';?>
+</header>
 <body>
 
 <?php
@@ -17,8 +20,8 @@ for ($etage = $GLOBALS['min'];$etage <= $GLOBALS['max'];$etage++){ // On créé 
     echo '<input type="button" value="Etage '.$etage.'" onclick="alert(\'Etage\')">'; // On concatène le numéro de l'étage dans la valeur du bouton
 }
 ?>
-<?php
-require('../CSS/Footer.php');
-?>
+
 </body>
+<footer><?php include '../CSS/Footer.php';?>
+</footer>
 </html>

@@ -28,6 +28,7 @@ if(isset($_POST['nameAjout'])  && isset($_POST['power']) && isset($_POST['HAG'])
     $name = $_POST['nameAjout'];
     $id=$_GET['id'];
     insertIntoCapteur($name,$_POST['power'],$_POST['HAG'],$id);
+    $pseudo=$_GET['pseudo'];
     $varEtat='ajouté à';
     require('../Vue/VueCapteurCree.php');
 
@@ -36,6 +37,7 @@ if(isset($_POST['nameAjout'])  && isset($_POST['power']) && isset($_POST['HAG'])
 elseif(isset($_POST['nameSuppr']) && isset($_POST['numberSuppr'])){
     $name=$_POST['nameSuppr'];
     deleteFromCapteur($_POST['numberSuppr']);
+    $pseudo=$_GET['pseudo'];
     $varEtat='supprimé de';
     require('../Vue/VueCapteurCree.php');
 }
@@ -56,7 +58,9 @@ else {
     if(isset($_GET['id'])){
         $name='le capteur';
         deleteFromCapteur($_GET['id']);
+        $pseudo=$_GET['pseudo'];
         $varEtat='supprimé de';
+
         require('../Vue/VueCapteurCree.php');
 }
 

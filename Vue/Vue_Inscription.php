@@ -15,7 +15,7 @@ if(!isset($_SESSION['connexion'])){
     <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 
-<div class="Inscription">
+<div style="margin-top: 8%" class="VueInscription">
 <form action='../Controleur/Controleur_Inscription.php' method="post">
     <label>Nom: <input type="text" name="nom" placeholder="Nom"/></label>
     <label>Prénom: <input type="text" name="prenom" placeholder="Prénom"/></label><br/>
@@ -25,13 +25,13 @@ if(!isset($_SESSION['connexion'])){
     <label>Confirmation du mot de passe: <input type="password" name="mdp2" placeholder="Confirmation du mot de passe"/></label><br/>
     <label>Pseudo: <input type="text" name="pseudo" placeholder="Pseudo"/></label><br/>
     <label>Date de naissance: <input type="date" name="date" placeholder="JJ/MM/YYYY"/></label><br/>
-    <input type="checkbox" name="cond" value="condit"> <a href="../Vue/ConditionDUtilisation.php">Condition générale d'utilisation</a> <br>
-    <input type="submit" value="Inscription"/>
+    <input type="checkbox" name="cond" value="condit"> <a href="../Vue/ConditionDUtilisation.php">J'accepte les conditions générales d'utilisation</a> <br>
+    <input type="submit" value="S'inscrire"/>
 </form>
 </div>
 <?php
 if (isset($erreur2)){
-    echo "Veuillez accepter les condition générale d'utilisation";
+    echo "Veuillez accepter les conditions générales d'utilisation";
 }
 if (isset($MdpDiff)){
 echo 'Mot de passe different';
