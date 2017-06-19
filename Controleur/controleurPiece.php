@@ -3,10 +3,10 @@
 
 require('../Modele/modelePiece.php');
 
-if(isset($_POST['nameAjout']) && isset($_POST['floor']) && isset($_POST['home']) && isset($_POST['HAG'])){
+if(isset($_POST['nameAjout']) && isset($_POST['floor']) && isset($_POST['HAG'])){
     $name = $_POST['nameAjout'];
     $floor = $_POST['floor'];    // A CORRIGER
-    $home = $_POST['home'];
+    $home = $_GET['home'];
     $HAG = $_POST['HAG'];
     CreerNouvellePiece($name,$floor,$home,$HAG);
     $varEtat='ajoutée à';

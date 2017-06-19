@@ -16,22 +16,22 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
+<div class="AccesPiece">
 
-
-<div class="VueAccesPiece">
+<div class="Container_AccesPiece"
 <!-- ajouter tout les infos communes -->
 <?php
 require('../Modele/modelePiece.php');
 ?>
 
-
 <h2><?=$_GET['Home']?></h2>
 
 <?php
     $IDHOME=$_GET['id'];
+    $user=$_GET['pseudo'];
 ?>
 
-<div class="VueAccesPiece_2"{
+<div class="Container_AccesPiece_2"{
 <article>
     <h3><strong><u>Accès aux pièces </u></strong><!--requete php nom de la piece --></h3>
     <!-- acces dynamique aux pieces -->
@@ -41,17 +41,17 @@ require('../Modele/modelePiece.php');
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <div class="VuePiece_Box">Pièce n°<?=$ListePiece[$var]?> : <strong><a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>"><?=$ListePiece[$var+1]?></a></strong>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></div>
+        <div class="VuePiece_Box"><strong><a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>&pseudo=<?=$user?>"><?=$ListePiece[$var+1]?></a></strong>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></div>
         <?php
         $var=$var+2;
     }
     ?>
 <br>
-    <p><strong><u>Ajouter une pièce :</u></strong></p>
-    <form action="../Controleur/controleurPiece.php" method="post">
+    <p><strong><u>Ajouter une pièce:</u></strong></p>
+    <form action="../Controleur/controleurPiece.php?home=<?=$IDHOME?>" method="post">
         <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
         <label for="floor">Étage</label> : <input placeholder="L'étage" type="number" name="floor" /><br/>
-        <label for="home">Identifiant de la maison</label> : <input placeholder="Identifiant de la maison" type="number" name="home" /><br/>
+        <!--<label for="home">Identifiant de la maison</label> : <input placeholder="Identifiant de la maison" type="number" name="home" /><br/>-->
         <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
         <br>
         <input type="submit" value="Envoyer" />
@@ -59,6 +59,11 @@ require('../Modele/modelePiece.php');
     <br/>
 
 </article>
+</div>
+
+<a href="../Controleur/controleurMaison.php?pseudo=<?=$user?>">retour</a>
+<br/>
+
 </div>
 </body>
 <footer><?php include '../CSS/Footer.php';?>

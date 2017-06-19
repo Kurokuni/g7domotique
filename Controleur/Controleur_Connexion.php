@@ -25,7 +25,6 @@ $_SESSION["nom"] = $Nom;
             case "1":
                 $Nom=$_POST['nom'];
                 $Mdp=$_POST['mdp'];
-                $adress=getHomePrincipale($Nom);
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":

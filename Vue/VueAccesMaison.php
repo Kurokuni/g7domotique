@@ -31,7 +31,7 @@ require('../Controleur/controleurVueEnsemble.php')
 
 <?php
 foreach($listeMaison as $ligne){
-    ?><p><?=$ligne['city']?> <?=$ligne['street_num']?> <?=$ligne['street']?> <a href="../Vue/VueAccesPiece.php?Home=maison 1&id=<?=$IDAdresse1?>"><strong>accès ici</strong></a><br/></p><?php
+    ?><p><?=$ligne['city']?> <?=$ligne['street_num']?> <?=$ligne['street']?> <a href="../Vue/VueAccesPiece.php?Home=maison 1&id=<?=$IDAdresse1?>&pseudo=<?=$Nom?>"><strong>accès ici</strong></a><br/></p><?php
 }
 ?>
 

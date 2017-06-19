@@ -2,11 +2,18 @@
 
 require('../Modele/modeleMaison.php');
 
-$_SESSION["IDUSER"]=getIDuser($Nom);
+if(!isset($Nom)){
+    $Nom=$_GET['pseudo'];
+    echo($Nom);
+}
 
-$listeMaison=getAddress($_SESSION["IDUSER"]);
+$adress=getHomePrincipale($Nom);
 
-$IDAdresse1=adress1($_SESSION['IDUSER']);
+$IDUSER=getIDuser($Nom);
+
+$listeMaison=getAddress($IDUSER);
+
+$IDAdresse1=adress1($IDUSER);
 
 require('../Vue/VueAccesMaison.php');
 

@@ -78,6 +78,10 @@ $listeInfos=GetProfileClient($_GET['iduser']);
     <input type="submit" value="Envoyer"/>
 
 </form>
+<br/><br/>
+
+<a href="../Controleur/controleurMaison.php?pseudo=<?=$listeInfos['pseudo']?>">retour</a>
+
 <br/><br/><br/><br/>
 
 
