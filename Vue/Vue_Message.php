@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
     <meta http-equiv="refresh" content="5; URL=http://localhost/g7domotique/Vue/Vue_Message.php">
 </head>
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 <body class="Message">
 
