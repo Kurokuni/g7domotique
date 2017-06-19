@@ -12,7 +12,7 @@ if(!isset($_SESSION['connexion'])){
     <title>Message</title>
 </head>
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
 <body class="Message">
 
