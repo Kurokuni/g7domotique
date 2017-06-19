@@ -16,6 +16,7 @@ function testConnexion ($pseudo, $mdp)
         return false;
     }
 }
+
 function role ($nom){
     require '../Else/connexionDB.php';
     $requ = $conn->prepare("SELECT IDUSER FROM user WHERE pseudo = '$nom'");

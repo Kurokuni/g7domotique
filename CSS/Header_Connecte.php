@@ -11,13 +11,14 @@
     </style>
 </head>
 <body>
-    <header  class="header"
+    <header  class="header" align="center"
         <a href="http://localhost/g7domotique/Vue/Accueil.php"> <img src="http://localhost/g7domotique/Images/Logo.png" style="width:5%" alt="Logo DomIsep"/> </a>
         <div class="header_barre">
-            <form method="get" action="#">
-                <input type="search" placeholder="Search!" name="search">
-            </form>
-            <a align="center" href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
-    </header>
+
+        </div>
+    </form>
+        <a align="center" href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
+
+</header>
 </body>
 </html>
