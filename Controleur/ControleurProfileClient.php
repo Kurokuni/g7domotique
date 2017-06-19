@@ -2,7 +2,7 @@
 
 require('../Modele/modeleProfileClient.php');
 
-$IDUSER=$_GET['IDUSER'];
+$IDUSER=$_GET['iduser'];
 
 // setteurs des informations editables du client
 
@@ -38,6 +38,5 @@ if(isset($_POST['oldmdp'])) {
 $listeinfos=GetProfileClient($IDUSER);
 
 $Nom=$listeinfos['pseudo'];
-$adress=getHomePrincipale($Nom);
 require('controleurMaison.php');
 

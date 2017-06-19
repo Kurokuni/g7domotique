@@ -82,14 +82,4 @@ function SetPWProfile($PW,$idClient){
     $requ1->execute();
 }
 
-// ************************************ Fonction annexe pour le fonctionnement du site *****************
 
-// cette fonction renvoi l'adresse de la premiere maison de l'utilisateur X
-function getHomePrincipale($pseudo){
-    require('../Else/connexionDB.php');
-    $requ1=$conn->prepare("SELECT city,street,street_num FROM adress_home WHERE IDHOME=1 AND IDUSER=(SELECT IDUSER FROM user WHERE pseudo=:pseudo)");
-    $requ1->bindParam(':pseudo',$pseudo,PDO::PARAM_STR,20);
-    $requ1->execute();
-    $tab=$requ1->fetch();
-    return($tab);
-}

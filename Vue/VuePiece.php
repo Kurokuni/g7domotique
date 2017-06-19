@@ -26,18 +26,11 @@ if(!isset($_SESSION['connexion'])){
 <article>
     <h3><?=$piece?></h3>
 
-    <?php $IDHOME=$_GET['idhome'];?>
+    <?php $IDHOME=$_GET['idhome'];
+          $pseudo=$_GET['pseudo'];?>
 
     <?php
 
-    /*$TabCaptPiece=CaptInRoom($id);
-    $cursor=0;
-    while($cursor<count($TabCaptPiece)){
-        ?>
-        <p><?=$TabCaptPiece[$cursor]?> : <?=$TabCaptPiece[$cursor+1]?>  <a href="../Controleur/controleurCapteur.php?capteur=<?=$TabCaptPiece[$cursor]?>&IDPiece=<?=$id?>&piece=<?=$piece?>">détails du capteur</a> </p>
-    <?php
-        $cursor=$cursor+2;
-    }*/
 
 
     $x=0;
@@ -96,7 +89,7 @@ if(!isset($_SESSION['connexion'])){
 
 
 
-    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>">Retour aux choix de la pièce</a>
+    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>&pseudo=<?=$pseudo?>">Retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
     <p>Retour au menu</p><!-- a changer en lien -->
 
