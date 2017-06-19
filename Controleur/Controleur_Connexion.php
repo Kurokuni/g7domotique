@@ -1,49 +1,42 @@
 <?php
-if(!isset($_SESSION['connexion'])){
-    session_start();
-    $_SESSION['connexion']=1;
-}
-?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Inscription</title>
-    </head>
-<body>
 
-<div class="Connexion">
-<?php
 require ('../Modele/Modele_Connexion.php');
-$Nom=$_POST['nom'];
-$Mdp=$_POST['mdp'];
-$_SESSION["nom"] = $Nom;
-    $test = testConnexion($Nom, $Mdp);
+
+if(isset($_COOKIE['test'])&&$_COOKIE['test']==1){
+    $_SESSION['nom']=$_COOKIE['nom'];
+}
+else {
+    $_SESSION['nom']=$_POST['nom'];
+}
+$_SESSION['mdp']=$_POST['mdp'];
+$Nom=$_SESSION['nom'];
+$Mdp=$_SESSION['mdp'];
+$test = testConnexion($Nom, $Mdp);
     if ($test) {
         $_SESSION["role"] = role($Nom);
-        switch ($_SESSION["role"]) {
+        if(isset($_POST['4Ever'])){
+            setcookie('test', 1, time() + 3600 * 24 * 2, '/', 'localhost', false, false);
+            setcookie('nom', $_POST['nom'], time() + 3600 * 24 * 2, '/', 'localhost', false, true);
+            setcookie('role',role($Nom),time()+3600*24*2,'/','localhost',false,true);
+        }
+        if(isset($_COOKIE['test'])&&$_COOKIE['test']==1){
+            $_SESSION["nom"] = $_COOKIE['nom'];
+            $_SESSION["role"] = $_COOKIE['role'];
+        }
+        $role=$_SESSION['role'];
+        switch ($role) {
             case "1":
-                $Nom=$_POST['nom'];
-                $Mdp=$_POST['mdp'];
+                $adress=getHomePrincipale($Nom);
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":
-                $Nom=$_POST['nom'];
-                $Mdp=$_POST['mdp'];
                 require ('../Vue/VueAdminConnecte.php');
                 break;
             default:
-                $Nom=$_POST['nom'];
-                $Mdp=$_POST['mdp'];
-                $adress=getHomePrincipale($Nom);
-                require ('../Controleur/controleurMaison.php');
+                require ('../Vue/Accueil.php');
         }
     } else {
         $erreur = true;
         require('../Vue/Accueil.php');
     }
 ?>
-</div>
-</body>
-
-</html>

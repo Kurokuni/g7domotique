@@ -4,7 +4,6 @@ if(!isset($_SESSION['connexion'])){
     $_SESSION['connexion']=1;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -15,38 +14,59 @@ if(!isset($_SESSION['connexion'])){
         <?php include '../CSS/Header_Deconnecte.php';?>
     </header>
     <body>
+    <?php
+    if (isset($_SESSION['role'])){
+        require ('../Controleur/Controleur_Connexion.php');
+    }
+    else {
+        if (isset($_COOKIE['test']) && $_COOKIE['test'] == 1) {
+            $nomD = $_COOKIE['nom'];
+        } else {
+            $nomD = "";
+        }
+        ?>
+        <div class="loginForm">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title"> Connection</p>
+                </div>
+                <div class="panel-body">
+                    <form action='http://localhost/g7domotique/Controleur/Controleur_Connexion.php' method='post'
+                          accept-charset="UTF-8" role="form">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Nom" name="nom" type="text"
+                                       value="<?php echo $nomD ?>">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Mot de passe" name="mdp" type="password"
+                                       value="">
+                            </div>
+                            <label classe="checkbox">
+                                <input type="checkbox" name="4Ever"> Souviens-toi de moi <3
+                            </label>
 
-
-    <div class ="loginForm">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <p class="panel-title"> Connexion</p>
-            </div>
-            <div class="panel-body">
-                <form action='http://localhost/g7domotique/Controleur/Controleur_Connexion.php' method='post' accept-charset="UTF-8" role="form">
-                    <fieldset>
-                        <div class ="form-group">
-                            <input class="form-control" placeholder="Nom" name="nom" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="">
-                        </div>
-                        <input type="submit" value="Connexion">
-
-                        <?php
-                        if (isset($erreur)){
-                            echo 'Nom de compte ou mot de passe incorrect!';
-                        }
-                        ?>
-                        <div class="Mdp"><a align="right" href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un compte</a>
-                            .
-                        <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de passe oublié</a>
-                        </div>
-                    </fieldset>
-                </form>
+                            <input type="submit" value="Connecxion">
+                            <?php
+                            if (isset($erreur)) {
+                                echo 'Nom de compte ou mot de passe incorrect!';
+                            }
+                            ?>
+                            <div class="Mdp"><a align="right"
+                                                href="http://localhost/g7domotique/Vue/Vue_Inscription.php">Créer un
+                                    compte</a>
+                                .
+                                <a align="right" href="http://localhost/g7domotique/Vue/VueMotDePasseOubli.php">Mot de
+                                    passe oublié</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+        <?php
+    }
+    ?>
 
         <!--<div class="QuiSommeNous">
         <p id="QuiSommesNous" align="center"> <strong> Qui sommes nous ? </strong></p>
