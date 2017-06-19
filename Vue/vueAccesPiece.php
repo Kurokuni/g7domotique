@@ -41,7 +41,7 @@ require('../Modele/modelePiece.php');
     $var=0; // indentation du tableau lié au count
     while($var<$nombrePiece) {
         ?>
-        <div class="VuePiece_Box"><strong><a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>&pseudo=<?=$user?>"><?=$ListePiece[$var+1]?></a></strong>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>">Supprimer</a></div>
+        <div class="VuePiece_Box"><strong><a href="../Controleur/controleurPiece.php?table=room&ID=<?=$ListePiece[$var]?>&room=<?=$ListePiece[$var+1]?>&idhome=<?=$IDHOME?>&pseudo=<?=$user?>"><?=$ListePiece[$var+1]?></a></strong>   <a href="../Controleur/controleurPiece.php?numberSuppr=<?=$ListePiece[$var]?>&nameSuppr=<?=$ListePiece[$var+1]?>&pseudo=<?=$user?>">Supprimer</a></div>
         <?php
         $var=$var+2;
     }

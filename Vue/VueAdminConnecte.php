@@ -57,8 +57,7 @@ if(isset($recherche2)){
 
 <br/><br/>
 
-<a href="../Vue/VueUserConnecte.php">Accéder à vos maison.</a>
-<a href="../Vue/VueModifierMotDePasseAC.php">Modifier le mot de passe d'un client.</a>
+
 <a href="../Vue/ConditionDUtilisation.php">Modifier les textes editables.</a>
 
 

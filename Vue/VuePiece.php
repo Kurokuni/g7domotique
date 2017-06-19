@@ -35,7 +35,7 @@ if(!isset($_SESSION['connexion'])){
 
     $x=0;
     foreach($tabcapteurs as $ligne) {
-        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>">supprimer</a><?php
+        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>&pseudo=<?=$pseudo?>">supprimer</a><?php
         echo( ' ' .'<br>');
         $x++;
     }
@@ -79,7 +79,7 @@ if(!isset($_SESSION['connexion'])){
     <br/>
     <br/>
     <p><strong><u>Ajouter un capteur :</u></strong></p>
-    <form action="../Controleur/controleurCapteur.php?id=<?=$id?>" method="post">
+    <form action="../Controleur/controleurCapteur.php?id=<?=$id?>&pseudo=<?=$pseudo?>" method="post">
         <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
         <label for="power">État du capteur (0/1)</label> : <input placeholder="L'état du capteur" type="number" name="power" /><br/>
         <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
