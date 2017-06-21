@@ -91,7 +91,7 @@ if(!isset($_SESSION['connexion'])){
 
     <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>&pseudo=<?=$pseudo?>">Retour aux choix de la pièce</a>
     <!-- peu être mettre une photo de la piece/ type de piece -->
-    <p>Retour au menu</p><!-- a changer en lien -->
+
 
 </article>
 </div>
