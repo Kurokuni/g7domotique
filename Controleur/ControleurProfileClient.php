@@ -31,7 +31,7 @@ if(isset($_POST['mailuser'])){
 
 if(isset($_POST['oldmdp'])) {
     if (checkingOldPW($_POST['oldmdp'], $IDUSER) && SameNewPW($_POST['newmdp1'], $_POST['newmdp2'])) {
-        SetPWProfile($_POST['newmdp1'], $IDUSER);
+        SetPWProfile(md5($_POST['newmdp1']), $IDUSER);
     }
 }
 

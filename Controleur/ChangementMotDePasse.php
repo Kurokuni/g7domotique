@@ -2,7 +2,7 @@
 require ('../Modele/ChangerMotDePasse.php');
 
 
-$Mdp=$_POST['ancienmotdepasse'];
+$Mdp=md5($_POST['ancienmotdepasse']);
 $test=Changementmdp( $Mdp);
 if($test){
     $nouveaumdp = $_post["nom="];

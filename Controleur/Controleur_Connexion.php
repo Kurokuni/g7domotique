@@ -8,7 +8,8 @@ if(isset($_COOKIE['test'])&&$_COOKIE['test']==1){
 else {
     $_SESSION['nom']=$_POST['nom'];
 }
-$_SESSION['mdp']=$_POST['mdp'];
+$mdpCry=md5($_POST['mdp']);
+$_SESSION['mdp']=$mdpCry;
 $Nom=$_SESSION['nom'];
 $Mdp=$_SESSION['mdp'];
 $test = testConnexion($Nom, $Mdp);
