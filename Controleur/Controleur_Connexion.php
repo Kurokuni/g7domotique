@@ -27,7 +27,6 @@ $test = testConnexion($Nom, $Mdp);
         $role=$_SESSION['role'];
         switch ($role) {
             case "1":
-                $adress=getHomePrincipale($Nom);
                 require ('../Controleur/controleurMaison.php');
                 break;
             case "2":

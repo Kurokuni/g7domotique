@@ -4,7 +4,7 @@ function MailDeID($mail){
     $requ = $conn->prepare("SELECT IDUSER FROM user WHERE email = '$mail'");
     $requ->execute();
     $data = $requ->fetch();
-    $var1=$data['pass_word'];
+    $var1=$data['IDUSER'];
     return $var1;
 }
 ?>

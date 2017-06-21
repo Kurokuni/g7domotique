@@ -30,7 +30,7 @@ if(isset($_POST['mailuser'])){
 // Changement du mot de passe
 
 if(isset($_POST['oldmdp'])) {
-    if (checkingOldPW($_POST['oldmdp'], $IDUSER) && SameNewPW($_POST['newmdp1'], $_POST['newmdp2'])) {
+    if (checkingOldPW(md5($_POST['oldmdp']), $IDUSER) && SameNewPW(md5($_POST['newmdp1']), md5($_POST['newmdp2']))) {
         SetPWProfile(md5($_POST['newmdp1']), $IDUSER);
     }
 }

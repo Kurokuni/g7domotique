@@ -77,8 +77,9 @@ function SameNewPW($PW1,$PW2){
 // modifier le mot de passe sur le profile
 function SetPWProfile($PW,$idClient){
     require('../Else/connexionDB.php');
+
     $requ1=$conn->prepare("UPDATE user SET pass_word=:Name WHERE IDUSER=$idClient");
-    $requ1->bindParam(':Name',$PW,PDO::PARAM_STR,30);
+    $requ1->bindParam(':Name',$PW,PDO::PARAM_STR);
     $requ1->execute();
 }
 

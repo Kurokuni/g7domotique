@@ -43,7 +43,7 @@ if(!isset($_SESSION['connexion'])){
                                        value="">
                             </div>
                             <label classe="checkbox">
-                                <input type="checkbox" name="4Ever"> Souviens-toi de moi <3
+                                <input type="checkbox" name="4Ever"> Rester connecté
                             </label>
 
                             <input type="submit" value="Connecxion">
