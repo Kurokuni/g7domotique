@@ -19,7 +19,7 @@ if(!isset($_SESSION['connexion'])){
 
 <br/><br/><br/>
 
-<h2>Mensions Légales</h2>
+<h2>Mentions Légales</h2>
 
 <p>Home</p>
 <p>Conformément aux dispositions des articles 6-III de la loi n°2004-575 du 21 juin 2004 pour
