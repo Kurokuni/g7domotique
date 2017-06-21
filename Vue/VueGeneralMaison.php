@@ -21,7 +21,7 @@ if(!isset($_SESSION['connexion'])){
 
 <!-- adresse de la maison -->
 
-<br/><!--saut de ligne pour aerer la présentation-->
+<!--saut de ligne pour aerer la présentation-->
 <?php
 foreach ($tabCapteurs as $ligne){
 $data=selectAverage($ligne['name'],$IDAdresse1);

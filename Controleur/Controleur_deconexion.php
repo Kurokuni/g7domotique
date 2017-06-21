@@ -9,6 +9,4 @@ if($_COOKIE['test']==1) {
 session_unset();
 session_destroy();
 
-print_r($_COOKIE);
-echo session_status();
 ?>
