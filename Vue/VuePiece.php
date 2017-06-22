@@ -21,7 +21,7 @@ if(!isset($_SESSION['connexion'])){
 <!-- ajouter tout les infos communes -->
 
 
-<div class="VuePiece">
+<div style="margin-top: 10%" class="VuePiece">
 
 <article>
     <h3><?=$piece?></h3>

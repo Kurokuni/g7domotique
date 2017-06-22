@@ -15,9 +15,9 @@
 <header  class="header" align="center"
         <a href="http://localhost/g7domotique/Vue/Accueil.php"><img src="http://localhost/g7domotique/Images/Logo.png" style="width:5%" alt="Logo DomIsep"></a>
         <a href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
-<a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php">
-    <img src="http://localhost/g7domotique/Images/deco.png" alt="Déconnexion" style="width:20px;height:20px;border:0">
-</a>
+<!--<a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php">-->
+<!--    <img src="http://localhost/g7domotique/Images/deco.png" alt="Déconnexion" style="width:20px;height:20px;border:0">-->
+<!--</a>-->
 </header>
 </body>
 </html>

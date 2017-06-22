@@ -14,7 +14,7 @@ if(!isset($_SESSION['connexion'])){
 <header>
     <?php require('../CSS/Header_Deconnecte.php');?>
 </header>
-<body class="ConditionUtilisation">
+<body style="margin-top: 10%" class="ConditionUtilisation">
 <?php require('../Modele/ModeleAdministrateur.php'); ?>
 
 <form action="../Controleur/ControleurAdministrateur.php" method="get">

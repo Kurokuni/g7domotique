@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
     <header>
         <?php include '../CSS/Header_Deconnecte.php';?>
     </header>
-    <body>
+    <body class="VueAccueil">
     <?php
     if (isset($_SESSION['role'])){
         require ('../Controleur/Controleur_Connexion.php');
@@ -25,7 +25,7 @@ if(!isset($_SESSION['connexion'])){
             $nomD = "";
         }
         ?>
-        <div class="loginForm">
+        <div style="margin-top: 5%" class="loginForm">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <p class="panel-title"> Connection</p>
@@ -45,7 +45,7 @@ if(!isset($_SESSION['connexion'])){
                             <label classe="checkbox">
                                 <input type="checkbox" name="4Ever"> Se souvenir de mon pseudo
                             </label>
-
+                            <br/>
                             <input type="submit" value="Connecxion">
                             <?php
                             if (isset($erreur)) {
@@ -74,7 +74,7 @@ if(!isset($_SESSION['connexion'])){
         <p>Dans le cadre de son expansion et de la diversification de ses activit&eacute;s, Domisep souhaite proposer une gestion compl&egrave;te des habitations connect&eacute;es (immeubles et maisons) pour les particuliers. Domisep souhaite, pour ce faire, rassembler toutes les technologies de l'informatique, des t&eacute;l&eacute;communications et de l'&eacute;lectronique et les mettre au service de ses clients, gr&acirc;ce &agrave; un traitement optimis&eacute; des signaux et des informations.</p>
         <p>Domisep offre à chaqu'un de ses clients, la possibilité de se connecter en toute sécurité afin de piloter, de protéger son domicile et de réduire les factures depuis un ordinateur, un téléphone mobile ou une tablette.</p>
          </div>-->
-    <div class="QuiSommeNous">
+    <div style="margin-top: 430px" class="QuiSommeNous">
     <?php require('../Controleur/getteurAdmin.php');
     echo($textQuiSommesNous)?>
     </div>

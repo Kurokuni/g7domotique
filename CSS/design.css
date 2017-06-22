@@ -11,17 +11,26 @@ image{
     width:100%;
     opacity: 0.8;
 }
-.loginForm {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 98%;
+.VueAccueil{
+    width:70%;
+    margin:auto;
 }
+
 .loginForm {
     color: white;
     font: bold 18px/20px Arial, Sans-Serif;
     letter-spacing: 0px;
     padding: 10px;
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 20px;
+    position: absolute;
+    top: 80px;
+    width: 70%;
+    margin:auto;
 }
 
 .VueInscription{
@@ -81,7 +90,10 @@ input[type=submit]:hover{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
-    margin-top: 350px;
+    width:80%
+    margin:auto;
+    padding:10px;
+
 }
 .EnvoieMail{
     color: #ffffff;
@@ -188,7 +200,7 @@ input[type=submit]:hover{
 }
 
 .header {
-    background-color: rgba(131, 174, 193,0.2);
+    background-color: rgba(131, 174, 193,0.9);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
     padding: 10px;
     height: 10%;
@@ -322,7 +334,7 @@ input[type=submit]:hover{
 }
 
 .footer{
-    background-color: rgba(131, 174, 193,0.4);
+    background-color: rgba(131, 174, 193,0.9);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;

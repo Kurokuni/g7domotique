@@ -18,7 +18,7 @@ if(!isset($_SESSION['connexion'])){
 </header>
 <div class="AccesPiece">
 
-<div class="Container_AccesPiece"
+<div class="VueAccesPiece"
 <!-- ajouter tout les infos communes -->
 <?php
 require('../Modele/modelePiece.php');
@@ -31,7 +31,7 @@ require('../Modele/modelePiece.php');
     $user=$_GET['pseudo'];
 ?>
 
-<div class="Container_AccesPiece_2"{
+<div class="VueAccesPiece_2"{
 <article>
     <h3><strong><u>Accès aux pièces </u></strong><!--requete php nom de la piece --></h3>
     <!-- acces dynamique aux pieces -->
@@ -55,16 +55,15 @@ require('../Modele/modelePiece.php');
         <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
         <br>
         <input type="submit" value="Envoyer" />
+        <a style="color:#ffffff" href="../Controleur/controleurMaison.php?pseudo=<?=$user?>"><strong>Retour</strong></a>
+        <br/>
     </form>
     <br/>
 
 </article>
 </div>
-
-<a href="../Controleur/controleurMaison.php?pseudo=<?=$user?>">retour</a>
-<br/>
-
 </div>
+
 </body>
 <footer><?php include '../CSS/Footer.php';?>
 </footer>
