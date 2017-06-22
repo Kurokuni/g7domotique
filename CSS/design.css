@@ -93,14 +93,15 @@ input[type=submit]:hover{
     width:80%
     margin:auto;
     padding:10px;
-
 }
+
 .EnvoieMail{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
     margin-top: 150px;
 }
+
 .Connexion{
     color: #ffffff;
     font: Arial;
@@ -114,6 +115,7 @@ input[type=submit]:hover{
     font-size: 15px;
     margin-top: 100px;
 }
+
 .VuePiece{
     color: #ffffff;
     font: Arial;
@@ -122,20 +124,22 @@ input[type=submit]:hover{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
 }
+
 .Message{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
     margin-top: 100px;
 }
+
 .TextsModifiables{
     color: #ffffff;
     font: Arial;
     font-size: 15px;
     margin-top: 100px;
 }
+
 .ProfileClient{
     color: #ffffff;
     font: Arial;
@@ -158,6 +162,7 @@ input[type=submit]:hover{
     margin:auto;
     padding-top: 10px;
 }
+
 .VueAccesPiece{
     display: flex;
     flex-direction: row;
@@ -167,6 +172,7 @@ input[type=submit]:hover{
     font: Arial;
     font-size: 15px;
 }
+
 .VueAccesPiece_2{
     display: flex;
     flex-direction: column;
@@ -179,6 +185,7 @@ input[type=submit]:hover{
     margin:auto;
     padding: 0px 20px 0px 20px;
 }
+
 .VuePiece_Box{
     display: flex;
     flex-direction: row;
@@ -194,7 +201,7 @@ input[type=submit]:hover{
     justify-content: space-between;
     width: 70%;
     margin:auto;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 20px 20px;
     height:30%;
     height: auto;
 }

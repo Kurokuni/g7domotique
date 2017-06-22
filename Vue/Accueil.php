@@ -13,7 +13,8 @@ if(!isset($_SESSION['connexion'])){
     <header>
         <?php include '../CSS/Header_Deconnecte.php';?>
     </header>
-    <body class="VueAccueil">
+    <body>
+    <div class="VueAccueil">
     <?php
     if (isset($_SESSION['role'])){
         require ('../Controleur/Controleur_Connexion.php');
@@ -78,7 +79,7 @@ if(!isset($_SESSION['connexion'])){
     <?php require('../Controleur/getteurAdmin.php');
     echo($textQuiSommesNous)?>
     </div>
-
+    </div>
     </body>
     <footer><?php include '../CSS/Footer.php';?>
     </footer>

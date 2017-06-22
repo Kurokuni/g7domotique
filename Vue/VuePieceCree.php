@@ -16,12 +16,13 @@ if(!isset($_SESSION['connexion'])){
     <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 <body>
+<div style="margin-top: 5%" class="PieceCree">
 
 <p>La pièce <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
 
 
 <a href="../Vue/vueAccesPiece.php?Home=maison 1">Retour a la liste des pièces</a>
-
+</div>
 </body>
 <footer><?php include '../CSS/Footer.php';?>
 </footer>

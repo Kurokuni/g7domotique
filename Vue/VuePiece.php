@@ -82,18 +82,19 @@ if(!isset($_SESSION['connexion'])){
     <form action="../Controleur/controleurCapteur.php?id=<?=$id?>&pseudo=<?=$pseudo?>" method="post">
         <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
         <label for="power">État du capteur (0/1)</label> : <input placeholder="L'état du capteur" type="number" name="power" /><br/>
-        <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/>
+        <label for="HAG">Hag associé</label> : <input placeholder="HAG associé" type="number" name="HAG" /><br/><br/>
         <input type="submit" value="Envoyer" />
+        <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>&pseudo=<?=$pseudo?>"><strong>Retour aux choix de la pièce</strong></a>
+        <!-- peu être mettre une photo de la piece/ type de piece -->
     </form>
     <br/>
 
 
 
-    <a href="../Vue/vueAccesPiece.php?Home=Maison 1&id=<?=$IDHOME?>&pseudo=<?=$pseudo?>">Retour aux choix de la pièce</a>
-    <!-- peu être mettre une photo de la piece/ type de piece -->
 
 
 </article>
+
 </div>
     <br/><br/><br/><br>
 

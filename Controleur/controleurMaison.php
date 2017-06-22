@@ -4,7 +4,6 @@ require('../Modele/modeleMaison.php');
 
 if(!isset($Nom)){
     $Nom=$_GET['pseudo'];
-    echo($Nom);
 }
 
 $adress=getHomePrincipale($Nom);

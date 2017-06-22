@@ -3,23 +3,79 @@
     <title>DomIsep</title>
     <link rel="stylesheet" href="http://localhost/g7domotique/CSS/design.css" />
 </head>
+    <style>
+        .dropbtn {
+            background-color: #3a3c3e;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #8f9296;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #8f9296;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #f1f1f1}
+
+        .show {display:block;}
+    </style>
 <body>
-<br>
-<br>
-<br>
-    <ul class="barre_navigation">
-            <li class="case1">
-                <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profil </a>
-            </li>
-            <li class="case1">
-                <a href="http://localhost/g7domotique/Vue/Vue_Message.php"> Discussion </a>
-            </li>
-            <li class="case1">
-                <a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php"> Deconnexion</a>
-            </li>
-    </ul>
+
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profil </a>
+        <a href="http://localhost/g7domotique/Vue/Vue_Message.php"> Discussion </a>
+        <a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php"> Deconnexion</a>
+    </div>
+</div>
+
+<script>
+    /* When the user clicks on the button,
+     toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 
 </body>
-
 </html>
+
