@@ -25,7 +25,7 @@ if(!isset($_SESSION['connexion'])){
 <p>Conformément aux dispositions des articles 6-III de la loi n°2004-575 du 21 juin 2004 pour
 la confiance dans l'économie numérique, dite L.C.E.N, il est porté à la connaissance des utilisateurs
 et visiteurs du site <strong>Home</strong> les présentes mentions légales</p>
-<p>Le site <strong>Home</strong> est accessible a l'adresse suivante: /\ à remplir /\. L'accès et l'utilisation
+<p>Le site <strong>Home</strong> est accessible a l'adresse suivante: http://localhost/g7domotique/Vue/Accueil.php. L'accès et l'utilisation
 du site sont soumis aux présentes "mentions légales" détaillées ce-après ainsi qu'aux lois et/ou règlements applicables.
 <br/>
 <br/>
@@ -38,7 +38,7 @@ téléphone : <?=$textNumero?><br/>
 Adresse e-mail : <?=$textMail?><br/>
 
 <br/>
-Sont considerés comme utilisateurs tout les internautes qui navignent, lisent, visionnent et utilisant le site <strong>Home</strong></p>
+Sont considerés comme utilisateurs tous les internautes qui navignent, lisent, visionnent et utilisant le site <strong>Home</strong></p>
 
 
 
