@@ -21,7 +21,7 @@ require ('../CSS/Header_Deconnecte.php');
 <div style="margin-top: 10%" class="MdpOublie">
 <form action='../Controleur/ControleurMotDePasseOubli.php' method='post'>
     <fieldset>
-        <legend>Veuiller entrer le e-mail de votre compte :</legend>
+        <legend>Veuillez entrer l'adresse mail de votre compte :</legend>
         E-mail: <input placeholder="Adresse email" type="email" name='e-mail'><br>
         <input type='submit' value="Soumettre">
     </fieldset>
