@@ -29,7 +29,7 @@ if(!isset($_SESSION['connexion'])){
         <div style="margin-top: 5%" class="loginForm">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <p class="panel-title"> Connection</p>
+                    <p class="panel-title"> Connexion</p>
                 </div>
                 <div class="panel-body">
                     <form action='http://localhost/g7domotique/Controleur/Controleur_Connexion.php' method='post'
@@ -47,7 +47,7 @@ if(!isset($_SESSION['connexion'])){
                                 <input type="checkbox" name="4Ever"> Se souvenir de mon pseudo
                             </label>
                             <br/>
-                            <input type="submit" value="Connecxion">
+                            <input type="submit" value="Connexion">
                             <?php
                             if (isset($erreur)) {
                                 echo 'Nom de compte ou mot de passe incorrect!';
