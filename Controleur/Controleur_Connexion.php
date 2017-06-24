@@ -1,5 +1,5 @@
-<?php
 
+<?php
 require ('../Modele/Modele_Connexion.php');
 
 if(isset($_COOKIE['test'])&&$_COOKIE['test']==1){
@@ -40,3 +40,4 @@ $test = testConnexion($Nom, $Mdp);
         require('../Vue/Accueil.php');
     }
 ?>
+

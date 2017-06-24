@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
     <title>Pièce ajoutée</title>
 </head>
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
 <body>
 <div style="margin-top: 5%" class="PieceCree">

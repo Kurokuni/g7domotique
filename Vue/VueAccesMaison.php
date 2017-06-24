@@ -10,13 +10,13 @@ if(!isset($_SESSION['connexion'])){
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../CSS/design.css" />
-    <!--<title>Acces Pièce</title>-->
+    <title>Accès Maison</title>
 </head>
-<body>
 
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
+<body>
 <div style="margin-top: 15%" class="VueAccesMaison">
 <?php
 
@@ -42,6 +42,7 @@ foreach($listeMaison as $ligne){
 require('../CSS/Footer.php');
 ?>
 </div>
+<script type="text/javascript" src="../Else/SideBar.js"></script>
 </body>
 
 <footer><?php include '../CSS/Footer.php';?>

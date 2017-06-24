@@ -14,8 +14,9 @@ if(!isset($_SESSION['connexion'])){
 </head>
 
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
+<body>
 <div class="AccesPiece">
 
 <div class="VueAccesPiece"
@@ -62,7 +63,7 @@ require('../Modele/modelePiece.php');
 
 </article>
 </div>
-</div>
+
 
 </body>
 <footer><?php include '../CSS/Footer.php';?>

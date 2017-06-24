@@ -15,7 +15,7 @@ if(!isset($_SESSION['connexion'])){
 <body>
 
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
 
 <!-- ajouter tout les infos communes -->

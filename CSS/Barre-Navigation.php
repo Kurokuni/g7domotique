@@ -1,78 +1,83 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>DomIsep</title>
     <link rel="stylesheet" href="http://localhost/g7domotique/CSS/design.css" />
 </head>
+
     <style>
-        .dropbtn {
-            background-color: #3a3c3e;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
         }
 
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: #8f9296;
-        }
-
-        .dropdown {
+        .overlay-content {
             position: relative;
-            display: inline-block;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #8f9296;
-            min-width: 160px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
+        .overlay a {
+            padding: 8px;
             text-decoration: none;
+            font-size: 36px;
+            color: #818181;
             display: block;
+            transition: 0.3s;
         }
 
-        .dropdown a:hover {background-color: #f1f1f1}
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
 
-        .show {display:block;}
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
     </style>
+</head>
+
 <body>
 
-<div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
         <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profil </a>
         <a href="http://localhost/g7domotique/Vue/Vue_Message.php"> Discussion </a>
         <a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php"> Deconnexion</a>
     </div>
 </div>
 
+<span style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
 <script>
-    /* When the user clicks on the button,
-     toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
     }
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
     }
 </script>
 

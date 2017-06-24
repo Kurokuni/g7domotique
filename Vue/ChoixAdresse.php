@@ -11,7 +11,7 @@ if(!isset($_SESSION['connexion'])){
     <title>ChoixAdresse</title>
 </head>
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
 <body>
 

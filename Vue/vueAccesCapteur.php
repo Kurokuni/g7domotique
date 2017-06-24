@@ -9,14 +9,15 @@ if(!isset($_SESSION['connexion'])){
 <head><!-- head contient tout ce qui est en entete de la page -->
     <!-- le titre de la page est visible dans les recherches google -->
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../design.css" />
-    <title>Acces Capteurs</title>
+    <link rel="stylesheet" href="../CSS/design.css" />
+    <title>Accès Capteurs</title>
 </head>
+<header>
+    <?php include '../CSS/Header_Connecte.php';?>
+</header>
 <body>
 
-<?php
-require('../Header.php');
-?>
+
 
 <!-- ajouter tout les infos communes -->
 <!-- nouveau code en esperant que ca fonctionne-->

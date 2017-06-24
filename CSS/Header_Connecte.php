@@ -11,14 +11,23 @@
     </style>
 </head>
 <body>
-    <header  class="header" align="center"
-        <a href="http://localhost/g7domotique/Vue/Accueil.php"> <img src="http://localhost/g7domotique/Images/Logo.png" style="width:5%" alt="Logo DomIsep"/> </a>
-        <div class="header_barre">
-
-        </div>
-    </form>
+    <header  class="header"
+        <a align="center" href="http://localhost/g7domotique/Vue/Accueil.php"> <img src="http://localhost/g7domotique/Images/Logo.png" style="width:5%" alt="Logo DomIsep"/> </a>
         <a align="center" href="http://localhost/g7domotique/Vue/Accueil.php">Votre maison connectée partout</a>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profil </a>
+            <a href="http://localhost/g7domotique/Vue/Vue_Message.php"> Discussion </a>
+            <a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php"> Deconnexion</a>
+        </div>
+    </div>
 
-</header>
+    <span style="float:left" style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script type="text/javascript" src="../Else/SideBar.js"></script>
+    </header>
+
 </body>
 </html>
+
+
