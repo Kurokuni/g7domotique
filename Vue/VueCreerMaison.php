@@ -29,7 +29,7 @@ if(isset($Pseudo)){
 <p>Ajoutez un domicile pour pouvoir le gerer a distance :</p>
 
 <form action="../Controleur/contoleurCreerMaison.php?pseudo=<?=$pseudo?>" method="post">
-    <label for="idMaison">Numero de votre mison :</label>
+    <label for="idMaison">Numero de votre maison :</label>
     <input type="number" name="idMaison" placeholder="ex: 1 pour la maison principale" cols="200"/>
     <br/>
     <br/>
