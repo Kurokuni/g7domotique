@@ -114,7 +114,7 @@ function setMail($text){
 
 function rechercheAdresseUser($texte){
     require('../Else/connexionDB.php');
-    $requ1=$conn->prepare("SELECT user.name, user.lastname, adress_home.street_num, adress_home.street, adress_home.city, adress_home.zipcode, adress_home.country,adress_home.IDADRESSE FROM 
+    $requ1=$conn->prepare("SELECT user.name, user.lastname, user.pseudo, adress_home.street_num, adress_home.street, adress_home.city, adress_home.zipcode, adress_home.country,adress_home.IDADRESSE FROM 
                             user JOIN adress_home ON user.IDUSER=adress_home.IDUSER WHERE user.pseudo LIKE '%$texte%' OR user.lastname LIKE '%$texte%' OR adress_home.street LIKE '%$texte%'");
     $requ1->execute();
     $resultat=$requ1->fetchAll();

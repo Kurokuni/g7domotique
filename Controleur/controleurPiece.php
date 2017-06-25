@@ -7,6 +7,7 @@ if(isset($_POST['nameAjout']) && isset($_POST['floor']) && isset($_POST['HAG']))
     $name = $_POST['nameAjout'];
     $floor = $_POST['floor'];    // A CORRIGER
     $home = $_GET['home'];
+    $pseudo=$_GET['pseudo'];
     $HAG = $_POST['HAG'];
     CreerNouvellePiece($name,$floor,$home,$HAG);
     $varEtat='ajoutée à';
@@ -20,6 +21,7 @@ if(isset($_POST['nameAjout']) && isset($_POST['floor']) && isset($_POST['HAG']))
 elseif(isset($_GET['numberSuppr']) && isset($_GET['nameSuppr'])){
     $ID=$_GET['numberSuppr'];
     $name=$_GET['nameSuppr'];
+    $pseudo=$_GET['pseudo'];
     SupprimerPiece($ID);
     $varEtat='supprimée de';
     require('../Vue/VuePieceCree.php');

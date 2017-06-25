@@ -35,7 +35,7 @@ if(!isset($_SESSION['connexion'])){
 
     $x=0;
     foreach($tabcapteurs as $ligne) {
-        echo($ligne['IDCAPTEUR'] . ' ' . $ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>&pseudo=<?=$pseudo?>">supprimer</a><?php
+        echo($ligne['name'] . ' ' . $tabvalues[$x] );?><a href="../Controleur/controleurCapteur.php?id=<?=$ligne['IDCAPTEUR']?>&pseudo=<?=$pseudo?>">supprimer</a><?php
         echo( ' ' .'<br>');
         $x++;
     }

@@ -40,7 +40,7 @@ require ('../CSS/Header_Connecte.php');
 if(isset($recherche1)){
     foreach($recherche1 as $ligne){
         echo($ligne['name'].' '.$ligne['lastname'].'     adresse : '.$ligne['street_num'].' '.$ligne['street'].' '.$ligne['zipcode'].' '.
-        $ligne['city'].' '.$ligne['country']);?><a href="../Vue/VueAccesPiece.php?Home=maison%201&id=<?=$ligne['IDADRESSE']?>">Voir le domicile</a><br/>
+        $ligne['city'].' '.$ligne['country']);?><a href="../Vue/VueAccesPiece.php?Home=maison%201&id=<?=$ligne['IDADRESSE']?>&pseudo=<?=$ligne['pseudo']?>">Voir le domicile</a><br/>
 <?php
     }
 }

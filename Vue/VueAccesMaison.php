@@ -36,6 +36,7 @@ foreach($listeMaison as $ligne){
 ?>
 
 <p><a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a></p>
+<p><a href="../Vue/VueCreerMaison.php?pseudo=<?=$Nom?>">ajouter une maison</a></p>
 
 
 <?php
@@ -48,16 +49,6 @@ require('../CSS/Footer.php');
 <footer><?php include '../CSS/Footer.php';?>
 </footer>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -18,7 +18,7 @@ if(!isset($_SESSION['connexion'])){
 <body>
 <br/><br/><br/>
 
-<p>La pièce <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
+<p>Le capteur <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
 
 
 <a href="../Controleur/controleurMaison.php?pseudo=<?=$pseudo?>">Retour à la liste de vos propriétés</a>

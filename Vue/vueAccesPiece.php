@@ -49,7 +49,7 @@ require('../Modele/modelePiece.php');
     ?>
 <br>
     <p><strong><u>Ajouter une pièce:</u></strong></p>
-    <form action="../Controleur/controleurPiece.php?home=<?=$IDHOME?>" method="post">
+    <form action="../Controleur/controleurPiece.php?home=<?=$IDHOME?>&pseudo=<?=$user?>" method="post">
         <label for="nameAjout">Nom</label> : <input placeholder="Nom de la pièce" type="text" name="nameAjout" /><br/>
         <label for="floor">Étage</label> : <input placeholder="L'étage" type="number" name="floor" /><br/>
         <!--<label for="home">Identifiant de la maison</label> : <input placeholder="Identifiant de la maison" type="number" name="home" /><br/>-->

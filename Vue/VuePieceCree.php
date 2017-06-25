@@ -13,16 +13,15 @@ if(!isset($_SESSION['connexion'])){
     <title>Pièce ajoutée</title>
 </head>
 <header>
-    <?php include '../CSS/Header_Connecte.php';?>
+    <?php include '../CSS/Header_Deconnecte.php';?>
 </header>
 <body>
-<div style="margin-top: 5%" class="PieceCree">
 
 <p>La pièce <?=$name?> a été <?=$varEtat?> la liste<br/> </p>
 
 
-<a href="../Vue/vueAccesPiece.php?Home=maison 1">Retour a la liste des pièces</a>
-</div>
+<a href="../Controleur/controleurMaison.php?pseudo=<?=$pseudo?>">Retour à la liste de vos propriétés</a>
+
 </body>
 <footer><?php include '../CSS/Footer.php';?>
 </footer>
