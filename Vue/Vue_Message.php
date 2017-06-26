@@ -10,7 +10,7 @@ if(!isset($_SESSION['connexion'])){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/design.css" />
     <title>Message</title>
-    <meta http-equiv="refresh" content="5; URL=http://localhost/g7domotique/Vue/Vue_Message.php">
+    <meta http-equiv="refresh" content="6000; URL=http://localhost/g7domotique/Vue/Vue_Message.php">
 </head>
 <header>
     <?php include '../CSS/Header_Connecte.php';?>
