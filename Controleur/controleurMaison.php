@@ -16,11 +16,4 @@ $IDAdresse1=adress1($IDUSER);
 
 require('../Vue/VueAccesMaison.php');
 
-
-
-
-
-
-
-
-
+?>

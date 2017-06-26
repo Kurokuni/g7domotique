@@ -10,6 +10,7 @@ else {
 }
 $mdpCry=md5($_POST['mdp']);
 $_SESSION['mdp']=$mdpCry;
+setcookie('nom', $_POST['nom'], time() + 3600 * 24 * 2, '/', 'localhost', false, true);
 $Nom=$_SESSION['nom'];
 $Mdp=$_SESSION['mdp'];
 $test = testConnexion($Nom, $Mdp);
