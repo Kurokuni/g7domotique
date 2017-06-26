@@ -50,7 +50,7 @@ if(!isset($_SESSION['connexion'])){
                             <input type="submit" value="Connexion">
                             <?php
                             if (isset($erreur)) {
-                                echo 'Nom de compte ou mot de passe incorrect!';
+                                echo '<span style="color:#E77471;">Nom de compte ou mot de passe incorrect!</span>';
                             }
                             ?>
                             <div class="Mdp"><a align="right"

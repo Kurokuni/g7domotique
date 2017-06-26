@@ -13,7 +13,7 @@ if(!isset($_SESSION['connexion'])){
 </head>
 <body>
 <header>
-    <?php include '../CSS/Header_Deconnecte.php';?>
+    <?php include '../CSS/Header_Connecte.php';?>
 </header>
 <br/><br/><br/><br/>
 
@@ -26,35 +26,34 @@ if(isset($Pseudo)){
 }
 ?>
 
-<p>Ajoutez un domicile pour pouvoir le gerer a distance :</p>
+<p>Ajoutez un domicile pour pouvoir le gérer à distance :</p>
 
 <form action="../Controleur/contoleurCreerMaison.php?pseudo=<?=$pseudo?>" method="post">
-    <label for="idMaison">Numero de votre maison :</label>
+    <label for="idMaison">Numéro de votre maison :</label>
     <input type="number" name="idMaison" placeholder="ex: 1 pour la maison principale" cols="200"/>
     <br/>
     <br/>
     <label for="street">Rue :</label>
-    <input type="text" name="street"/>
+    <input type="text" name="street" placeholder="Rue"/>
     <br/>
     <br/>
-    <label for="street_num">Numero de rue :</label>
-    <input type="number" name="street_num" />
+    <label for="street_num">Numéro de rue :</label>
+    <input type="number" name="street_num" placeholder="Numéro" />
     <br/>
     <br/>
     <label for="ville">Ville :</label>
-    <input type="text" name="ville" />
+    <input type="text" name="ville" placeholder="Ville" />
     <br/>
     <br/>
     <label for="zipcode">Code postal :</label>
-    <input type="number" name="zipcode" />
+    <input type="number" name="zipcode" placeholder="Code Postal"/>
     <br/>
     <br/>
     <label for="country">Pays :</label>
-    <input type="text" name="country" />
+    <input type="text" name="country" placeholder="Pays"/>
     <br/>
     <br/>
     <input type="submit" value="Envoyer"/>
-
 </form>
 
 <br/><br/><br/><br/><br/>

@@ -27,7 +27,7 @@ require('../Controleur/controleurVueEnsemble.php')
 
 <br>
 
-<p>Accédez au détails de vos propriétés :</p>
+<p>Accédez aux détails de vos propriétés :</p>
 
 <?php
 foreach($listeMaison as $ligne){
@@ -36,7 +36,7 @@ foreach($listeMaison as $ligne){
 ?>
 
 <!--<p><a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a></p>-->
-<p><a href="../Vue/VueCreerMaison.php?pseudo=<?=$Nom?>">ajouter une maison</a></p>
+<p><a href="../Vue/VueCreerMaison.php?pseudo=<?=$Nom?>">Ajouter une maison</a></p>
 
 
 <?php

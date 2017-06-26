@@ -21,7 +21,7 @@ if(!isset($_SESSION['connexion'])){
 <h2>bienvenue <?=$_SESSION["nom"]?></h2>
 
 <br/>
-<p>Accedez à vos maison en un clic ici:</p>
+<p>Accédez à vos maison en un clic ici:</p>
 
 <!-- a transformer en dynamique-->
 <a href="../Vue/vueAccesPiece.php?Home=maison 1">Maison 1</a><br/>

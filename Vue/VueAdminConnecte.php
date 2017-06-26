@@ -27,7 +27,7 @@ require ('../CSS/Header_Connecte.php');
         <option value="InfoDomicile">Informations sur un domicile</option>
     </select>
 <br/><br/>
-    <label for="recherche">rechercher un domicile ou un utilisateur :<br/></label>
+    <label for="recherche">Rechercher un domicile ou un utilisateur :<br/></label>
     <input type="text" name="recherche" />
 
     <input type="submit" value="envoyer" />
@@ -58,7 +58,7 @@ if(isset($recherche2)){
 <br/><br/>
 
 
-<a href="../Vue/TextsModifiables.php">Modifier les textes editables.</a>
+<a href="../Vue/TextsModifiables.php">Modifier les textes éditables.</a>
 
 
 

@@ -17,7 +17,7 @@
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profil </a>
+            <a href="http://localhost/g7domotique/Vue/ProfilClient.php"> Profile </a>
             <a href="http://localhost/g7domotique/Vue/Vue_Message.php"> Discussion </a>
             <a href="http://localhost/g7domotique/Vue/Vue-Deconnexion.php"> Deconnexion</a>
         </div>
