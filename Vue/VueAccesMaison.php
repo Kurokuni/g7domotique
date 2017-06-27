@@ -35,7 +35,7 @@ foreach($listeMaison as $ligne){
 }
 ?>
 
-<!--<p><a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a></p>-->
+<a href="../Vue/ProfilClient.php?iduser=<?=getIDuser($Nom);?>"><strong>Modifier votre profile</strong></a></p>
 <p><a href="../Vue/VueCreerMaison.php?pseudo=<?=$Nom?>">Ajouter une maison</a></p>
 
 
